@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidateController;
+use App\Http\Controllers\VoterController;
 use App\Http\Controllers\VoteController;
 
 /*
@@ -21,8 +22,11 @@ use App\Http\Controllers\VoteController;
 // });
 
 Route::apiResource('candidates', CandidateController::class);
-Route::apiResource('voters', VoteController::class);
-// Route::put('candidates/{id}', [CandidateController::class,'update']);
+Route::apiResource('voters', VoterController::class);
+// Route::apiResource('votes', VoteController::class);
+
+Route::get('votes', [voteController::class,'index']);
+Route::post('votes', [voteController::class,'store']);
 
 // Route::apiResource('voters', 'VoterController');
 // Route::apiResource('elections', 'ElectionController');

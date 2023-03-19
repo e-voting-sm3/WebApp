@@ -3,115 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voter;
+use App\Services\VoteService;
 
 class VoteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $voteService;
+
+    public function __construct(VoteService $voteService)
+    {
+        $this->voteService = $voteService;
+    }
+
     public function index()
     {
-        $voter = Voter::latest()->get();
+        $votes = $this->voteService->getResults();
 
         return response()->json([
-            'data' => $voter
+            'data' => $votes
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'nrp' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:voters',
+            'voter_id' => 'required',
+            'candidate_id' => 'required',
         ]);
 
-        $voter = New Voter();
-        $voter->name = $request->name;
-        $voter->nrp = $request->nrp;
-        $voter->email = $request->email;
-        $voter->save();
+        $vote = $this->voteService->voteCandidate($request);
 
         return response()->json([
-            'data' => $voter
+            'data' => $vote
         ]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'nrp' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:voters',
-        ]);
-
-        $voter = Voter::find($id);
-        $voter->name = $request->name;
-        $voter->nrp = $request->nrp;
-        $voter->email = $request->email;
-        $voter->save();
-
-        return response()->json([
-            'data' => $voter
-        ]);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
