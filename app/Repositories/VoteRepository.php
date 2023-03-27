@@ -1,6 +1,7 @@
 <?php 
 
 namespace App\Repositories;
+use Illuminate\Support\Facades\DB;
 use App\Models\Vote;
 use App\Models\Voter;
 use App\Models\Candidate;
@@ -16,9 +17,14 @@ class VoteRepository
 
   public function getResults()
   {
-    $result = $this->votes->all();
-    return $result;
+      $results = DB::table('votes')
+                  ->select('candidate_id', DB::raw('count(voter_id) as total_votes'))
+                  ->groupBy('candidate_id')
+                  ->get();
+
+      return $results;
   }
+
 
 
   public function voteCandidate(array $data)
