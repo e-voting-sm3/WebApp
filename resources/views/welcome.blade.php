@@ -39,7 +39,7 @@
                     <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
                 </div>
                 <div>
-                    <h4 class="logo-text">Synadmin</h4>
+                    <h4 class="logo-text">EtoV</h4>
                 </div>
                 <div class="toggle-icon ms-auto"><i class='bx bx-first-page'></i>
                 </div>
@@ -88,104 +88,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-label">UI Elements</li>
-                <li>
-                    <a href="http://127.0.0.1:8000/widgets">
-                        <div class="parent-icon"><i class='bx bx-briefcase-alt-2'></i>
-                        </div>
-                        <div class="menu-title">Widgets</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;" class="has-arrow">
-                        <div class="parent-icon"><i class='bx bx-cart-alt' ></i>
-                        </div>
-                        <div class="menu-title">eCommerce</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/ecommerce-products"><i class="bx bx-right-arrow-alt"></i>Products</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/ecommerce-products-details"><i class="bx bx-right-arrow-alt"></i>Product Details</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/ecommerce-add-new-products"><i class="bx bx-right-arrow-alt"></i>Add New Products</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/ecommerce-orders"><i class="bx bx-right-arrow-alt"></i>Orders</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class='bx bx-gift'></i>
-                        </div>
-                        <div class="menu-title">Components</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/component-alerts"><i class="bx bx-right-arrow-alt"></i>Alerts</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-accordions"><i class="bx bx-right-arrow-alt"></i>Accordions</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-badges"><i class="bx bx-right-arrow-alt"></i>Badges</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-buttons"><i class="bx bx-right-arrow-alt"></i>Buttons</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-cards"><i class="bx bx-right-arrow-alt"></i>Cards</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-carousels"><i class="bx bx-right-arrow-alt"></i>Carousels</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-list-groups"><i class="bx bx-right-arrow-alt"></i>List Groups</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-media-object"><i class="bx bx-right-arrow-alt"></i>Media Objects</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-modals"><i class="bx bx-right-arrow-alt"></i>Modals</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-navs-tabs"><i class="bx bx-right-arrow-alt"></i>Navs & Tabs</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-navbar"><i class="bx bx-right-arrow-alt"></i>Navbar</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-paginations"><i class="bx bx-right-arrow-alt"></i>Pagination</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-popovers-tooltips"><i class="bx bx-right-arrow-alt"></i>Popovers & Tooltips</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-progress-bars"><i class="bx bx-right-arrow-alt"></i>Progress</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-spinners"><i class="bx bx-right-arrow-alt"></i>Spinners</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-notifications"><i class="bx bx-right-arrow-alt"></i>Notifications</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/component-avtars-chips"><i class="bx bx-right-arrow-alt"></i>Avatrs & Chips</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class='bx bx-command' ></i>
-                        </div>
-                        <div class="menu-title">Content</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/content-grid-system"><i class="bx bx-right-arrow-alt"></i>Grid System</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/content-typography"><i class="bx bx-right-arrow-alt"></i>Typography</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/content-text-utilities"><i class="bx bx-right-arrow-alt"></i>Text Utilities</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"> <i class='bx bx-atom'></i>
-                        </div>
-                        <div class="menu-title">Icons</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/icons-line-icons"><i class="bx bx-right-arrow-alt"></i>Line Icons</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/icons-boxicons"><i class="bx bx-right-arrow-alt"></i>Boxicons</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/icons-feather-icons"><i class="bx bx-right-arrow-alt"></i>Feather Icons</a>
-                        </li>
-                    </ul>
-                </li>
+        
                 <li class="menu-label">Forms & Tables</li>
                 <li>
                     <a class="has-arrow" href="javascript:;">
@@ -228,29 +131,7 @@
                     </ul>
                 </li>
                 <li class="menu-label">Pages</li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class='bx bx-lock-open-alt'></i>
-                        </div>
-                        <div class="menu-title">Authentication</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/authentication-signin" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign In</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-signup" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign Up</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-signin-with-header-footer" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign In with Header & Footer</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-signup-with-header-footer" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign Up with Header & Footer</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-forgot-password" target="_blank"><i class="bx bx-right-arrow-alt"></i>Forgot Password</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-reset-password" target="_blank"><i class="bx bx-right-arrow-alt"></i>Reset Password</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/authentication-lock-screen" target="_blank"><i class="bx bx-right-arrow-alt"></i>Lock Screen</a>
-                        </li>
-                    </ul>
-                </li>
+              
                 <li>
                     <a href="http://127.0.0.1:8000/user-profile">
                         <div class="parent-icon"><i class='bx bx-user-pin' ></i>
@@ -258,100 +139,7 @@
                         <div class="menu-title">User Profile</div>
                     </a>
                 </li>
-                <li>
-                    <a href="http://127.0.0.1:8000/timeline">
-                        <div class="parent-icon"> <i class="bx bx-video-recording"></i>
-                        </div>
-                        <div class="menu-title">Timeline</div>
-                    </a>
-                </li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class="bx bx-error"></i>
-                        </div>
-                        <div class="menu-title">Errors</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/errors-404-error" target="_blank"><i class="bx bx-right-arrow-alt"></i>404 Error</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/errors-500-error" target="_blank"><i class="bx bx-right-arrow-alt"></i>500 Error</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/errors-coming-soon" target="_blank"><i class="bx bx-right-arrow-alt"></i>Coming Soon</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/error-blank-page" target="_blank"><i class="bx bx-right-arrow-alt"></i>Blank Page</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:8000/faq">
-                        <div class="parent-icon"><i class="bx bx-help-circle"></i>
-                        </div>
-                        <div class="menu-title">FAQ</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:8000/pricing-table">
-                        <div class="parent-icon"><i class='bx bx-dollar-circle'></i>
-                        </div>
-                        <div class="menu-title">Pricing</div>
-                    </a>
-                </li>
-                <li class="menu-label">Charts & Maps</li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class="bx bx-line-chart"></i>
-                        </div>
-                        <div class="menu-title">Charts</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/charts-apex-chart"><i class="bx bx-right-arrow-alt"></i>Apex</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/charts-chartjs"><i class="bx bx-right-arrow-alt"></i>Chartjs</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/charts-highcharts"><i class="bx bx-right-arrow-alt"></i>Highcharts</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class='bx bx-map-pin' ></i>
-                        </div>
-                        <div class="menu-title">Maps</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/map-google-maps"><i class="bx bx-right-arrow-alt"></i>Google Maps</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/map-vector-maps"><i class="bx bx-right-arrow-alt"></i>Vector Maps</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-label">Others</li>
-                <li>
-                    <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class="bx bx-menu"></i>
-                        </div>
-                        <div class="menu-title">Menu Levels</div>
-                    </a>
-                    <ul>
-                        <li> <a class="has-arrow" href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Level One</a>
-                            <ul>
-                                <li> <a class="has-arrow" href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Level Two</a>
-                                    <ul>
-                                        <li> <a href="javascript:;"><i class="bx bx-right-arrow-alt"></i>Level Three</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:8000/../../documentation/index.html" target="_blank">
-                        <div class="parent-icon"><i class="bx bx-folder"></i>
-                        </div>
-                        <div class="menu-title">Documentation</div>
-                    </a>
-                </li>
+            
                 <li>
                     <a href="https://themeforest.net/user/codervent" target="_blank">
                         <div class="parent-icon"><i class='bx bx-headphone' ></i>
