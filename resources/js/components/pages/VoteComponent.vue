@@ -1,0 +1,15 @@
+<template>
+    <div>
+      <h1 class="mt-5 text-center">Halaman Vote</h1>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+  
+  }
+  </script>
+  
+  <style>
+  
+  </style>
