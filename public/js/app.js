@@ -5377,6 +5377,80 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -5393,6 +5467,71 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10761,7 +10900,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.test[data-v-299e239e]{\n    margin-top: 200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.test[data-v-299e239e]{\r\n    margin-top: 200px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28984,7 +29123,203 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Halaman Hasil")])])
+    return _c("div", { staticClass: "page-wrapper" }, [
+      _c("div", { staticClass: "page-content" }, [
+        _c("div", { staticClass: "col-12 col-lg-4 d-flex" }, [
+          _c("div", { staticClass: "card radius-10 w-100" }, [
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "d-flex align-items-center" }, [
+                _c("div", [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("Hasil Voting")]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "dashboard-top-countries mb-3 p-3" }, [
+              _c("div", { staticClass: "row mb-4" }, [
+                _c("div", { staticClass: "col-2" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://awsimages.detik.net.id/community/media/visual/2019/02/19/42393387-9c5c-4be4-97b8-49260708719e.jpeg?w=750&q=90",
+                      width: "42",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v("Umi "),
+                    _c("strong", { staticClass: "float-end" }, [
+                      _vm._v("445,85"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "progress radius-10",
+                      staticStyle: { height: "6px" },
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-gradient-blues",
+                        staticStyle: { width: "86%" },
+                        attrs: { role: "progressbar" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mb-4" }, [
+                _c("div", { staticClass: "col-2" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://awsimages.detik.net.id/community/media/visual/2019/09/25/24d37f7d-ba75-4cd1-93f7-d29a31d31d4f.jpeg?w=750&q=90",
+                      width: "42",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v("Gery"),
+                    _c("strong", { staticClass: "float-end" }, [
+                      _vm._v("683,46"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "progress radius-10",
+                      staticStyle: { height: "6px" },
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-gradient-cosmic",
+                        staticStyle: { width: "66%" },
+                        attrs: { role: "progressbar" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mb-4" }, [
+                _c("div", { staticClass: "col-2" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://awsimages.detik.net.id/community/media/visual/2019/09/25/7384aef5-e918-48f0-a8da-36b99c78116d.jpeg?w=750&q=90",
+                      width: "42",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v("Caloni "),
+                    _c("strong", { staticClass: "float-end" }, [
+                      _vm._v("982,43"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "progress radius-10",
+                      staticStyle: { height: "6px" },
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-gradient-burning",
+                        staticStyle: { width: "56%" },
+                        attrs: { role: "progressbar" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mb-4" }, [
+                _c("div", { staticClass: "col-2" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://cdn.pixabay.com/photo/2021/04/25/14/31/man-6206550_960_720.jpg",
+                      width: "42",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v("Jonathan"),
+                    _c("strong", { staticClass: "float-end" }, [
+                      _vm._v("852,35"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "progress radius-10",
+                      staticStyle: { height: "6px" },
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-gradient-lush",
+                        staticStyle: { width: "45%" },
+                        attrs: { role: "progressbar" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mb-4" }, [
+                _c("div", { staticClass: "col-2" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://qph.cf2.quoracdn.net/main-qimg-9181d2a583a983d7776918a000809272-lq",
+                      width: "42",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v("Chriss"),
+                    _c("strong", { staticClass: "float-end" }, [
+                      _vm._v("785,24"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "progress radius-10",
+                      staticStyle: { height: "6px" },
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-gradient-kyoto",
+                        staticStyle: { width: "38%" },
+                        attrs: { role: "progressbar" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
@@ -29016,8 +29351,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h1", { staticClass: "mt-5 text-center" }, [_vm._v("Halaman Vote")]),
+    return _c("div", { staticClass: "page-wrapper" }, [
+      _c("div", { staticClass: "page-content" }, [
+        _c("h6", { staticClass: "mb-0 text-uppercase" }, [_vm._v("Vote")]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row row-cols-1 row-cols-lg-2 row-cols-xl-4" },
+          [
+            _c("div", { staticClass: "col" }, [
+              _c("div", { staticClass: "card radius-15" }, [
+                _c("div", { staticClass: "card-body text-center" }, [
+                  _c("div", { staticClass: "p-4 border radius-15" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle shadow",
+                      attrs: {
+                        src: "assets/images/avatars/avatar-1.png",
+                        width: "110",
+                        height: "110",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h5", { staticClass: "mb-0 mt-5" }, [
+                      _vm._v("Pauline I. Bird"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mb-3" }, [_vm._v("Webdeveloper")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "d-grid" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-outline-primary",
+                          attrs: { href: "#" },
+                        },
+                        [_vm._v("Vote")]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]),
     ])
   },
 ]
