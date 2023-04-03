@@ -1,7 +1,8 @@
 import CandidatePage from './components/pages/CandidateComponent.vue'
 import VotePage from './components/pages/VoteComponent.vue'
 import ResultPage from './components/pages/ResultComponent.vue'
-import Example from './components/ExampleComponent.vue'
+import ViewCandidatePage from './components/pages/ViewCandidateComponent.vue'
+import DashboardPage from './components/pages/DashboardComponent.vue'
 
 export const routes = [
     {
@@ -20,8 +21,13 @@ export const routes = [
         component: ResultPage
     },
     {
-        path: "/xample",
-        name: 'xample',
-        component: Example
+        path: "/view",
+        name: 'view',
+        component: ViewCandidatePage
+    },
+    {
+        path: "/dashboard",
+        name: 'dashboard',
+        component: DashboardPage
     },
 ]
