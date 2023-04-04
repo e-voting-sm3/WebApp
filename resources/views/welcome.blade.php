@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/dark-theme.css" />
     <link rel="stylesheet" href="assets/css/semi-dark.css" />
     <link rel="stylesheet" href="assets/css/header-colors.css" />
-    <title>Synadmin - Bootstrap5 Admin Template</title>
+    <title>e-voting | Admin Panel</title>
 </head>
 
 <body class="antialiased">
@@ -65,55 +65,17 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="javascript:;" class="has-arrow">
-                        <div class="parent-icon"><i class='bx bx-spa' ></i>
-                        </div>
-                        <div class="menu-title">Application</div>
-                    </a>
-                    <ul>
-                        <li> <a href="http://127.0.0.1:8000/app-emailbox"><i class="bx bx-right-arrow-alt"></i>Email</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-chat-box"><i class="bx bx-right-arrow-alt"></i>Chat Box</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-file-manager"><i class="bx bx-right-arrow-alt"></i>File Manager</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-contact-list"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-to-do"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-invoice"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/app-fullcalender"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
-                        </li>
-                    </ul>
-                </li>
-        
                 <li class="menu-label">Forms & Tables</li>
                 <li>
                     <a class="has-arrow" href="javascript:;">
                         <div class="parent-icon"><i class='bx bx-hourglass' ></i>
                         </div>
-                        <div class="menu-title">Forms</div>
+                        <div class="menu-title">Actions</div>
                     </a>
                     <ul>
-                        <li> <a href="http://127.0.0.1:8000/form-elements"><i class="bx bx-right-arrow-alt"></i>Form Elements</a>
+                        <li> <a href="/candidate"><i class="bx bx-right-arrow-alt"></i>Add Data Candidate</a>
                         </li>
-                        <li> <a href="http://127.0.0.1:8000/form-input-group"><i class="bx bx-right-arrow-alt"></i>Input Groups</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-layouts"><i class="bx bx-right-arrow-alt"></i>Forms Layouts</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-validations"><i class="bx bx-right-arrow-alt"></i>Form Validation</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-wizard"><i class="bx bx-right-arrow-alt"></i>Form Wizard</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-text-editor"><i class="bx bx-right-arrow-alt"></i>Text Editor</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-file-upload"><i class="bx bx-right-arrow-alt"></i>File Upload</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-date-time-pickes"><i class="bx bx-right-arrow-alt"></i>Date Pickers</a>
-                        </li>
-                        <li> <a href="http://127.0.0.1:8000/form-select2"><i class="bx bx-right-arrow-alt"></i>Select2</a>
+                        <li> <a href="/vote"><i class="bx bx-right-arrow-alt"></i>Vote Candidate</a>
                         </li>
                     </ul>
                 </li>
@@ -124,9 +86,11 @@
                         <div class="menu-title">Tables</div>
                     </a>
                     <ul>
-                        <li> <a href="http://127.0.0.1:8000/table-basic-table"><i class="bx bx-right-arrow-alt"></i>Basic Table</a>
+                        <li> <a href="/voter"><i class="bx bx-right-arrow-alt"></i>Data Voter</a>
                         </li>
-                        <li> <a href="http://127.0.0.1:8000/table-datatable"><i class="bx bx-right-arrow-alt"></i>Data Table</a>
+                        <li> <a href="/voter"><i class="bx bx-right-arrow-alt"></i>Data Candidate</a>
+                        </li>
+                        <li> <a href="/result"><i class="bx bx-right-arrow-alt"></i>Result</a>
                         </li>
                     </ul>
                 </li>
