@@ -3,6 +3,7 @@ import VotePage from './components/pages/VoteComponent.vue'
 import ResultPage from './components/pages/ResultComponent.vue'
 import ViewCandidatePage from './components/pages/ViewCandidateComponent.vue'
 import DashboardPage from './components/pages/DashboardComponent.vue'
+import LoginPage from './components/pages/LoginComponent.vue'
 
 export const routes = [
     {
@@ -29,5 +30,10 @@ export const routes = [
         path: "/dashboard",
         name: 'dashboard',
         component: DashboardPage
+    },
+    {
+        path: "/login",
+        name: 'login',
+        component: LoginPage
     },
 ]
