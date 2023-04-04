@@ -9,13 +9,20 @@
                       <div class="col-xl-9 mx-auto">
                           <h6 class="mb-0 text-uppercase">Form Kandidat</h6>
                           <hr/>
-                          <div class="card" style="width: 18rem;">
-                            <img src="https://cdn1-production-images-kly.akamaized.net/uhXAD7i67hFzSNemDRg0kNqcXPM=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2762230/original/086593900_1553668873-LISA_BLACKPINK_1.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Visi dan Misi</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2023/03/01/Screenshot_20230301-085334_Instagram-788762056.jpg" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Salma</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                </div>
+                                </div>
                             </div>
-                            </div>    
+                            </div>
                       </div>
                   </div>
                   <!--end row-->
