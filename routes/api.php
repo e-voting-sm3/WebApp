@@ -23,10 +23,16 @@ use App\Http\Controllers\AuthController;
 //     Route::group([
 //       'middleware' => 'auth:api'
 //     ], function () {
+//         Route::apiResource('candidates', CandidateController::class);
+//         Route::apiResource('voters', VoterController::class);
+//         Route::get('votes', [VoteController::class,'index']);
+//         Route::post('votes', [VoteController::class,'store']);
 //     });
     
 //   });
 // });
+
+// tanpa auth
 Route::apiResource('candidates', CandidateController::class);
 Route::apiResource('voters', VoterController::class);
 Route::get('votes', [VoteController::class,'index']);

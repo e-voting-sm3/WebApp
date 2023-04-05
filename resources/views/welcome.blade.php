@@ -88,7 +88,7 @@
                     <ul>
                         <li> <a href="/voter"><i class="bx bx-right-arrow-alt"></i>Data Voter</a>
                         </li>
-                        <li> <a href="/voter"><i class="bx bx-right-arrow-alt"></i>Data Candidate</a>
+                        <li> <a href="/datacandidate"><i class="bx bx-right-arrow-alt"></i>Data Candidate</a>
                         </li>
                         <li> <a href="/result"><i class="bx bx-right-arrow-alt"></i>Result</a>
                         </li>
