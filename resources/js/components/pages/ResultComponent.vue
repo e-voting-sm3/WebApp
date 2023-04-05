@@ -1,6 +1,6 @@
 <template>
     <div class="page-wrapper">
-      <div class="page-content">
+      <div class="page-content ms-auto">
         <div class="col-12 col-lg-4 d-flex">
 					<div class="card radius-10 w-100">
 						<div class="card-body">
