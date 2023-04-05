@@ -8,7 +8,10 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 
+// components
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('sidebar-component', require('./components/SidebarComponent.vue').default);
+Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 
 
 
