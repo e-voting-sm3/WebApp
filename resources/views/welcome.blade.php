@@ -1,26 +1,25 @@
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--favicon-->
-	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
-	<!--plugins-->
-			<link href="assets/plugins/input-tags/css/tagsinput.css" rel="stylesheet" />
-			<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<!-- loader-->
-	<link href="assets/css/pace.min.css" rel="stylesheet" />
-	<script src="assets/js/pace.min.js"></script>
-	<!-- Bootstrap CSS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/input-tags/css/tagsinput.css" rel="stylesheet" />
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-	<link href="assets/css/app.css" rel="stylesheet">
-	<link href="assets/css/icons.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/icons.css" rel="stylesheet">
 
     <!-- Theme Style CSS -->
     <link rel="stylesheet" href="assets/css/dark-theme.css" />
@@ -30,13 +29,13 @@
 </head>
 
 <body class="antialiased">
-	<!--wrapper-->
-	<div class="wrapper">
+    <!--wrapper-->
+    <div class="wrapper">
         <!--navigation-->
         <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
-                    <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+                    <img src="assets/images/logo-img.jpeg" class="logo-icon" alt="logo icon">
                 </div>
                 <div>
                     <h4 class="logo-text">EtoV</h4>
@@ -68,7 +67,7 @@
                 <li class="menu-label">Forms & Tables</li>
                 <li>
                     <a class="has-arrow" href="javascript:;">
-                        <div class="parent-icon"><i class='bx bx-hourglass' ></i>
+                        <div class="parent-icon"><i class='bx bx-hourglass'></i>
                         </div>
                         <div class="menu-title">Actions</div>
                     </a>
@@ -95,64 +94,43 @@
                     </ul>
                 </li>
                 <li class="menu-label">Pages</li>
-              
+
                 <li>
                     <a href="http://127.0.0.1:8000/user-profile">
-                        <div class="parent-icon"><i class='bx bx-user-pin' ></i>
+                        <div class="parent-icon"><i class='bx bx-user-pin'></i>
                         </div>
                         <div class="menu-title">User Profile</div>
                     </a>
                 </li>
-            
+
                 <li>
                     <a href="https://themeforest.net/user/codervent" target="_blank">
-                        <div class="parent-icon"><i class='bx bx-headphone' ></i>
+                        <div class="parent-icon"><i class='bx bx-headphone'></i>
                         </div>
                         <div class="menu-title">Support</div>
                     </a>
                 </li>
             </ul>
             <!--end navigation-->
-        </div>        <!--end navigation-->
-        
-		<!--start header -->
-	<!--end header -->
-		
-		<!--start page wrapper -->
-		            
-		<!--end page wrapper -->
+        </div> <!--end navigation-->
+
+        <!--start header -->
+        <!--end header -->
+
+        <!--start page wrapper -->
+
+        <!--end page wrapper -->
 
         <header>
-        <div class="topbar d-flex align-items-center">
+            <div class="topbar d-flex align-items-center">
                 <nav class="navbar navbar-expand">
                     <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
                     </div>
-                    <div class="top-menu-left d-none d-lg-block">
-                        <ul class="nav">
-                              <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/app-emailbox"><i class='bx bx-envelope'></i></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/app-chat-box"><i class='bx bx-message'></i></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/app-fullcalender"><i class='bx bx-calendar'></i></a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="http://127.0.0.1:8000/app-to-do"><i class='bx bx-check-square'></i></a>
-                              </li>
-                          </ul>
-                     </div>
-                    <div class="search-bar flex-grow-1">
-                        <div class="position-relative search-bar-box">
-                            <input type="text" class="form-control search-control" placeholder="Type to search..."> <span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
-                            <span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
-                        </div>
-                    </div>
+
                     <div class="top-menu ms-auto">
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item mobile-search-icon">
-                                <a class="nav-link" href="#">   <i class='bx bx-search'></i>
+                                <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                                 </a>
                             </li>
                             <li class="nav-item dropdown dropdown-large">
@@ -211,7 +189,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">5 new user registered</p>
                                                 </div>
                                             </div>
@@ -222,7 +200,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">You have recived new orders</p>
                                                 </div>
                                             </div>
@@ -233,7 +211,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">The pdf files generated</p>
                                                 </div>
                                             </div>
@@ -244,7 +222,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Time Response <span class="msg-time float-end">28 min
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">5.1 min avarage time response</p>
                                                 </div>
                                             </div>
@@ -254,8 +232,7 @@
                                                 <div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <h6 class="msg-name">New Product Approved <span
-                                                class="msg-time float-end">2 hrs ago</span></h6>
+                                                    <h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
                                                     <p class="msg-info">Your new product has approved</p>
                                                 </div>
                                             </div>
@@ -266,7 +243,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">New customer comments recived</p>
                                                 </div>
                                             </div>
@@ -277,7 +254,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">Successfully shipped your item</p>
                                                 </div>
                                             </div>
@@ -288,7 +265,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">24 new authors joined last week</p>
                                                 </div>
                                             </div>
@@ -299,7 +276,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">45% less alerts last 4 weeks</p>
                                                 </div>
                                             </div>
@@ -329,7 +306,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Daisy Anderson <span class="msg-time float-end">5 sec
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">The standard chunk of lorem</p>
                                                 </div>
                                             </div>
@@ -341,7 +318,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Althea Cabardo <span class="msg-time float-end">14
-                                                sec ago</span></h6>
+                                                            sec ago</span></h6>
                                                     <p class="msg-info">Many desktop publishing packages</p>
                                                 </div>
                                             </div>
@@ -353,7 +330,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Oscar Garner <span class="msg-time float-end">8 min
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">Various versions have evolved over</p>
                                                 </div>
                                             </div>
@@ -365,7 +342,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Katherine Pechon <span class="msg-time float-end">15
-                                                min ago</span></h6>
+                                                            min ago</span></h6>
                                                     <p class="msg-info">Making this the first true generator</p>
                                                 </div>
                                             </div>
@@ -377,7 +354,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Amelia Doe <span class="msg-time float-end">22 min
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">Duis aute irure dolor in reprehenderit</p>
                                                 </div>
                                             </div>
@@ -389,7 +366,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Cristina Jhons <span class="msg-time float-end">2 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">The passage is attributed to an unknown</p>
                                                 </div>
                                             </div>
@@ -401,7 +378,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">James Caviness <span class="msg-time float-end">4 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">The point of using Lorem</p>
                                                 </div>
                                             </div>
@@ -413,7 +390,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Peter Costanzo <span class="msg-time float-end">6 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">It was popularised in the 1960s</p>
                                                 </div>
                                             </div>
@@ -425,7 +402,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">David Buckley <span class="msg-time float-end">2 hrs
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">Various versions have evolved over</p>
                                                 </div>
                                             </div>
@@ -437,7 +414,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Thomas Wheeler <span class="msg-time float-end">2 days
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">If you are going to use a passage</p>
                                                 </div>
                                             </div>
@@ -449,7 +426,7 @@
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6 class="msg-name">Johnny Seitz <span class="msg-time float-end">5 days
-                                                ago</span></h6>
+                                                            ago</span></h6>
                                                     <p class="msg-info">All the Lorem Ipsum generators</p>
                                                 </div>
                                             </div>
@@ -494,11 +471,11 @@
 
 
 
-        
+
 
 
         <div id="app">
-            <router-view><router-view/>
+            <router-view><router-view />
         </div>
 
 
@@ -511,132 +488,132 @@
 
 
 
-		<!--start overlay-->
-		<div class="overlay toggle-icon"></div>
-		<!--end overlay-->
-		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
-		<!--End Back To Top Button-->
-		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2021. All right reserved.</p>
-		</footer>
-	</div>
+        <!--start overlay-->
+        <div class="overlay toggle-icon"></div>
+        <!--end overlay-->
+        <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+        <!--End Back To Top Button-->
+        <footer class="page-footer">
+            <p class="mb-0">Copyright © 2021. All right reserved.</p>
+        </footer>
+    </div>
 
-        <!--end wrapper-->
-        <!--start switcher-->
-        <div class="switcher-wrapper">
-            <div class="switcher-btn"> 
-                <i class='bx bx-cog bx-spin'></i>
+    <!--end wrapper-->
+    <!--start switcher-->
+    <div class="switcher-wrapper">
+        <div class="switcher-btn">
+            <i class='bx bx-cog bx-spin'></i>
+        </div>
+        <div class="switcher-body">
+            <div class="d-flex align-items-center">
+                <h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+                <button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
             </div>
-            <div class="switcher-body">
-                <div class="d-flex align-items-center">
-                    <h5 class="mb-0 text-uppercase">Theme Customizer</h5>
-                    <button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
-                </div>
-                <hr/>
-                <h6 class="mb-0">Theme Styles</h6>
-                <hr/>
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
-                        <label class="form-check-label" for="lightmode">Light</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
-                        <label class="form-check-label" for="darkmode">Dark</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
-                        <label class="form-check-label" for="semidark">Semi Dark</label>
-                    </div>
-                </div>
-                <hr/>
+            <hr />
+            <h6 class="mb-0">Theme Styles</h6>
+            <hr />
+            <div class="d-flex align-items-center justify-content-between">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
-                    <label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+                    <label class="form-check-label" for="lightmode">Light</label>
                 </div>
-                <hr/>
-                <h6 class="mb-0">Header Colors</h6>
-                <hr/>
-                <div class="header-colors-indigators">
-                    <div class="row row-cols-auto g-3">
-                        <div class="col">
-                            <div class="indigator headercolor1" id="headercolor1"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor2" id="headercolor2"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor3" id="headercolor3"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor4" id="headercolor4"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor5" id="headercolor5"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor6" id="headercolor6"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor7" id="headercolor7"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator headercolor8" id="headercolor8"></div>
-                        </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+                    <label class="form-check-label" for="darkmode">Dark</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
+                    <label class="form-check-label" for="semidark">Semi Dark</label>
+                </div>
+            </div>
+            <hr />
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
+                <label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+            </div>
+            <hr />
+            <h6 class="mb-0">Header Colors</h6>
+            <hr />
+            <div class="header-colors-indigators">
+                <div class="row row-cols-auto g-3">
+                    <div class="col">
+                        <div class="indigator headercolor1" id="headercolor1"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor2" id="headercolor2"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor3" id="headercolor3"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor4" id="headercolor4"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor5" id="headercolor5"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor6" id="headercolor6"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor7" id="headercolor7"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator headercolor8" id="headercolor8"></div>
                     </div>
                 </div>
-                <hr/>
-                <h6 class="mb-0">Sidebar Colors</h6>
-                <hr/>
-                <div class="header-colors-indigators">
-                    <div class="row row-cols-auto g-3">
-                        <div class="col">
-                            <div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
-                        </div>
-                        <div class="col">
-                            <div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
-                        </div>
+            </div>
+            <hr />
+            <h6 class="mb-0">Sidebar Colors</h6>
+            <hr />
+            <div class="header-colors-indigators">
+                <div class="row row-cols-auto g-3">
+                    <div class="col">
+                        <div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
+                    </div>
+                    <div class="col">
+                        <div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--end switcher-->
+    </div>
+    <!--end switcher-->
 
 
 
 
 
-        <script src="/js/app.js"></script>
+    <script src="/js/app.js"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!--plugins-->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-        <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-        <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-        <!--app JS-->
-        <script src="assets/js/app.js"></script>
-        <script src="assets/plugins/input-tags/js/tagsinput.js"></script>
-	
-    </body>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/plugins/input-tags/js/tagsinput.js"></script>
+
+</body>
 
 </html>

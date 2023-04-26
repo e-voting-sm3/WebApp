@@ -20,6 +20,9 @@ Vue.component('candidate-page', require('./components/pages/CandidateComponent.v
 Vue.component('vote-page', require('./components/pages/VoteComponent.vue').default);
 Vue.component('result-page', require('./components/pages/ResultComponent.vue').default);
 
+Vue.component('login-page', require('./components/pages/LoginComponent.vue').default);
+Vue.component('register-page', require('./components/pages/RegisterComponent.vue').default);
+
 Vue.use(VueRouter);
 const router = new VueRouter({
     mode: 'history',
