@@ -10,7 +10,7 @@ import TableVoterPage from './components/pages/TableVoter.vue'
 
 export const routes = [
     {
-        path: "/",
+        path: "/candidate",
         name: 'candidate',
         component: CandidatePage 
     },
@@ -35,7 +35,7 @@ export const routes = [
         component: DashboardPage
     },
     {
-        path: "/login",
+        path: "/",
         name: 'login',
         component: LoginPage
     },

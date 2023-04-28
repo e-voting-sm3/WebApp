@@ -9,11 +9,8 @@
         <!--end breadcrumb-->
           <div class="card">
             <div class="card-header">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Tambah Data
-              </button>
                 <div class="row">
-                  <table class="table table-striped table-hover">
+                  <table id="table_id" class="table table-striped table-hover">
                     <thead>
                       <tr>
                         <th scope="col">No.</th>

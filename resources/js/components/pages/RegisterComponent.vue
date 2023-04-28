@@ -1,12 +1,11 @@
 <template>
-    <div class="wrapper">
-		<div class="authentication-header"></div>
-		<div class="d-flex align-items-center justify-content-center my-5 my-lg-0">
-			<div class="container">
+ <div class="wrapper">
+		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
+			<div class="container-fluid">
 				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
 					<div class="col mx-auto">
-						<div class="my-4 text-center">
-							<!-- <img src="assets/images/logo-img.png" width="180" alt="" /> -->
+						<div class="mb-4 text-center">
+	
 						</div>
 						<div class="card">
 							<div class="card-body">
@@ -19,9 +18,9 @@
 									<div class="d-grid">
 										<a class="btn my-4 shadow-sm btn-white" href="javascript:;"> <span class="d-flex justify-content-center align-items-center">
                           <img class="me-2" src="assets/images/icons/search.svg" width="16" alt="Image Description">
-                          <span>Sign Up with Google</span>
+                          <span>Sign in with Google</span>
 											</span>
-										</a> <a href="javascript:;" class="btn btn-facebook"><i class="bx bxl-facebook"></i>Sign Up with Facebook</a>
+										</a> 
 									</div>
 									<div class="login-separater text-center mb-4"> <span>OR SIGN UP WITH EMAIL</span>
 										<hr/>
@@ -43,22 +42,7 @@
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
-												</div>
-											</div>
-											<div class="col-12">
-												<label for="inputSelectCountry" class="form-label">Country</label>
-												<select class="form-select" id="inputSelectCountry" aria-label="Default select example">
-													<option selected>India</option>
-													<option value="1">United Kingdom</option>
-													<option value="2">America</option>
-													<option value="3">Dubai</option>
-												</select>
-											</div>
-											<div class="col-12">
-												<div class="form-check form-switch">
-													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-													<label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms & Conditions</label>
+													<input type="password" class="form-control border-end-1" id="inputChoosePassword" placeholder="Enter Password"> 
 												</div>
 											</div>
 											<div class="col-12">
