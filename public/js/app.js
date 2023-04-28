@@ -7156,8 +7156,6 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "page-content ms-auto"
   }, [_c("div", {
-    staticClass: "col-12 col-lg-4 d-flex"
-  }, [_c("div", {
     staticClass: "card radius-10 w-100"
   }, [_c("div", {
     staticClass: "card-body"
@@ -7174,7 +7172,7 @@ var staticRenderFns = [function () {
   }, [_c("img", {
     attrs: {
       src: "https://awsimages.detik.net.id/community/media/visual/2019/02/19/42393387-9c5c-4be4-97b8-49260708719e.jpeg?w=750&q=90",
-      width: "42",
+      width: "47",
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
@@ -7203,7 +7201,7 @@ var staticRenderFns = [function () {
   }, [_c("img", {
     attrs: {
       src: "https://awsimages.detik.net.id/community/media/visual/2019/09/25/24d37f7d-ba75-4cd1-93f7-d29a31d31d4f.jpeg?w=750&q=90",
-      width: "42",
+      width: "47",
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
@@ -7232,7 +7230,7 @@ var staticRenderFns = [function () {
   }, [_c("img", {
     attrs: {
       src: "https://awsimages.detik.net.id/community/media/visual/2019/09/25/7384aef5-e918-48f0-a8da-36b99c78116d.jpeg?w=750&q=90",
-      width: "42",
+      width: "47",
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
@@ -7260,8 +7258,8 @@ var staticRenderFns = [function () {
     staticClass: "col-2"
   }, [_c("img", {
     attrs: {
-      src: "https://cdn.pixabay.com/photo/2021/04/25/14/31/man-6206550_960_720.jpg",
-      width: "42",
+      src: "https://cdn.pixabay.com/photo/2021/04/25/14/31/man-6206470_960_720.jpg",
+      width: "47",
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
@@ -7290,7 +7288,7 @@ var staticRenderFns = [function () {
   }, [_c("img", {
     attrs: {
       src: "https://qph.cf2.quoracdn.net/main-qimg-9181d2a583a983d7776918a000809272-lq",
-      width: "42",
+      width: "47",
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
@@ -7312,7 +7310,7 @@ var staticRenderFns = [function () {
     attrs: {
       role: "progressbar"
     }
-  })])])])])])])])]);
+  })])])])])])])]);
 }];
 render._withStripped = true;
 
@@ -7345,28 +7343,18 @@ var staticRenderFns = [function () {
     staticClass: "page-content"
   }, [_c("div", {
     staticClass: "page-breadcrumb d-none d-sm-flex align-items-center mb-3"
-  }), _vm._v(" "), _c("button", {
+  }), _vm._v(" "), _c("div", {
+    staticClass: "card"
+  }, [_c("div", {
+    staticClass: "card-header"
+  }, [_c("button", {
     staticClass: "btn btn-primary",
     attrs: {
       type: "button",
       "data-bs-toggle": "modal",
       "data-bs-target": "#staticBackdrop"
     }
-  }, [_vm._v("\n  Tambah\n")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-warning",
-    attrs: {
-      type: "reset",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n  Edit\n")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-danger",
-    attrs: {
-      type: "submit",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n  Hapus\n")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n          Tambah Data\n          ")]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("table", {
     staticClass: "table table-striped table-hover"
@@ -7378,15 +7366,25 @@ var staticRenderFns = [function () {
     attrs: {
       scope: "col"
     }
-  }, [_vm._v("Nama")]), _vm._v(" "), _c("th", {
+  }, [_vm._v("Nama Alat Tangkap")]), _vm._v(" "), _c("th", {
     attrs: {
       scope: "col"
     }
-  }, [_vm._v("Visi Misi")]), _vm._v(" "), _c("th", {
+  }, [_vm._v("Aksi")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("th", {
     attrs: {
-      scope: "col"
+      scope: "row"
     }
-  }, [_vm._v("Aksi")])])])])])])]);
+  }), _vm._v(" "), _c("td"), _vm._v(" "), _c("td", [_c("a", {
+    staticClass: "btn btn-sm btn-warning",
+    attrs: {
+      "data-bs-toggle": "modal"
+    }
+  }, [_vm._v("EDIT")]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-sm btn-danger",
+    attrs: {
+      "data-bs-toggle": "modal"
+    }
+  }, [_vm._v("DELETE")])])])])])])])])])]);
 }];
 render._withStripped = true;
 
@@ -7419,28 +7417,18 @@ var staticRenderFns = [function () {
     staticClass: "page-content"
   }, [_c("div", {
     staticClass: "page-breadcrumb d-none d-sm-flex align-items-center mb-3"
-  }), _vm._v(" "), _c("button", {
+  }), _vm._v(" "), _c("div", {
+    staticClass: "card"
+  }, [_c("div", {
+    staticClass: "card-header"
+  }, [_c("button", {
     staticClass: "btn btn-primary",
     attrs: {
       type: "button",
       "data-bs-toggle": "modal",
       "data-bs-target": "#staticBackdrop"
     }
-  }, [_vm._v("\n  Tambah\n")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-warning",
-    attrs: {
-      type: "reset",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n  Edit\n")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-danger",
-    attrs: {
-      type: "submit",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n  Hapus\n")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n          Tambah Data\n          ")]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("table", {
     staticClass: "table table-striped table-hover"
@@ -7452,15 +7440,25 @@ var staticRenderFns = [function () {
     attrs: {
       scope: "col"
     }
-  }, [_vm._v("Nama")]), _vm._v(" "), _c("th", {
+  }, [_vm._v("Nama Alat Tangkap")]), _vm._v(" "), _c("th", {
     attrs: {
       scope: "col"
     }
-  }, [_vm._v("Visi Misi")]), _vm._v(" "), _c("th", {
+  }, [_vm._v("Aksi")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("th", {
     attrs: {
-      scope: "col"
+      scope: "row"
     }
-  }, [_vm._v("Aksi")])])])])])])]);
+  }), _vm._v(" "), _c("td"), _vm._v(" "), _c("td", [_c("a", {
+    staticClass: "btn btn-sm btn-warning",
+    attrs: {
+      "data-bs-toggle": "modal"
+    }
+  }, [_vm._v("EDIT")]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-sm btn-danger",
+    attrs: {
+      "data-bs-toggle": "modal"
+    }
+  }, [_vm._v("DELETE")])])])])])])])])])]);
 }];
 render._withStripped = true;
 
