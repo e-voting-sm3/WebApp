@@ -6,14 +6,14 @@
 				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
 					<div class="col mx-auto">
 						<div class="my-4 text-center">
-							<img src="assets/images/logo-img.png" width="180" alt="" />
+							<!-- <img src="assets/images/logo-img.png" width="180" alt="" /> -->
 						</div>
 						<div class="card">
 							<div class="card-body">
 								<div class="p-4 rounded">
 									<div class="text-center">
 										<h3 class="">Sign Up</h3>
-										<p>Already have an account? <a href="url('/components/pages/LoginComponent')">Sign in here</a>
+										<p>Already have an account? <a href="/login">Sign in here</a>
 										</p>
 									</div>
 									<div class="d-grid">

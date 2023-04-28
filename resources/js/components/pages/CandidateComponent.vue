@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <sidebar-component/>
+		<header-component/>
     <div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
@@ -39,6 +42,7 @@
   </div>
 </div>
 </div>
+  </div>
 </template>
 <script>
 import axios from "axios";
