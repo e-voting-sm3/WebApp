@@ -5,6 +5,8 @@ import ViewCandidatePage from './components/pages/ViewCandidateComponent.vue'
 import DashboardPage from './components/pages/DashboardComponent.vue'
 import LoginPage from './components/pages/LoginComponent.vue'
 import RegisterPage from './components/pages/RegisterComponent.vue'
+import TableCandidatePage from './components/pages/TableCandidate.vue'
+import TableVoterPage from './components/pages/TableVoter.vue'
 
 export const routes = [
     {
@@ -41,5 +43,15 @@ export const routes = [
         path: "/register",
         name: 'register',
         component: RegisterPage
+    },
+    {
+        path: "/tablecandidate",
+        name: 'tablecandidate',
+        component: TableCandidatePage
+    },
+    {
+        path: "/tablevoter",
+        name: 'tablevoter',
+        component: TableVoterPage
     },
 ]
