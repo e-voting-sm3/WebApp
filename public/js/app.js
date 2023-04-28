@@ -5900,641 +5900,16 @@ var staticRenderFns = [function () {
   }, [_c("i", {
     staticClass: "bx bx-menu"
   })]), _vm._v(" "), _c("div", {
-    staticClass: "top-menu-left d-none d-lg-block"
-  }, [_c("ul", {
-    staticClass: "nav"
-  }, [_c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/app-emailbox"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-envelope"
-  })])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/app-chat-box"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-message"
-  })])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/app-fullcalender"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-calendar"
-  })])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/app-to-do"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-check-square"
-  })])])])]), _vm._v(" "), _c("div", {
-    staticClass: "search-bar flex-grow-1"
-  }, [_c("div", {
-    staticClass: "position-relative search-bar-box"
-  }, [_c("input", {
-    staticClass: "form-control search-control",
-    attrs: {
-      type: "text",
-      placeholder: "Type to search..."
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "position-absolute top-50 search-show translate-middle-y"
-  }, [_c("i", {
-    staticClass: "bx bx-search"
-  })]), _vm._v(" "), _c("span", {
-    staticClass: "position-absolute top-50 search-close translate-middle-y"
-  }, [_c("i", {
-    staticClass: "bx bx-x"
-  })])])]), _vm._v(" "), _c("div", {
     staticClass: "top-menu ms-auto"
-  }, [_c("ul", {
-    staticClass: "navbar-nav align-items-center"
-  }, [_c("li", {
-    staticClass: "nav-item mobile-search-icon"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-search"
-  })])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item dropdown dropdown-large"
-  }, [_c("a", {
-    staticClass: "nav-link dropdown-toggle dropdown-toggle-nocaret",
-    attrs: {
-      href: "#",
-      role: "button",
-      "data-bs-toggle": "dropdown",
-      "aria-expanded": "false"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-category"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "dropdown-menu dropdown-menu-end"
-  }, [_c("div", {
-    staticClass: "row row-cols-3 g-3 p-3"
-  }, [_c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-cosmic text-white"
-  }, [_c("i", {
-    staticClass: "bx bx-group"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Teams")])]), _vm._v(" "), _c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-burning text-white"
-  }, [_c("i", {
-    staticClass: "bx bx-atom"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Projects")])]), _vm._v(" "), _c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-lush text-white"
-  }, [_c("i", {
-    staticClass: "bx bx-shield"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Tasks")])]), _vm._v(" "), _c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-kyoto text-dark"
-  }, [_c("i", {
-    staticClass: "bx bx-notification"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Feeds")])]), _vm._v(" "), _c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-blues text-dark"
-  }, [_c("i", {
-    staticClass: "bx bx-file"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Files")])]), _vm._v(" "), _c("div", {
-    staticClass: "col text-center"
-  }, [_c("div", {
-    staticClass: "app-box mx-auto bg-gradient-moonlit text-white"
-  }, [_c("i", {
-    staticClass: "bx bx-filter-alt"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "app-title"
-  }, [_vm._v("Alerts")])])])])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item dropdown dropdown-large"
-  }, [_c("a", {
-    staticClass: "nav-link dropdown-toggle dropdown-toggle-nocaret position-relative",
-    attrs: {
-      href: "#",
-      role: "button",
-      "data-bs-toggle": "dropdown",
-      "aria-expanded": "false"
-    }
-  }, [_c("span", {
-    staticClass: "alert-count"
-  }, [_vm._v("7")]), _vm._v(" "), _c("i", {
-    staticClass: "bx bx-bell"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "dropdown-menu dropdown-menu-end"
-  }, [_c("a", {
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "msg-header"
-  }, [_c("p", {
-    staticClass: "msg-header-title"
-  }, [_vm._v("Notifications")]), _vm._v(" "), _c("p", {
-    staticClass: "msg-header-clear ms-auto"
-  }, [_vm._v("Marks all as read")])])]), _vm._v(" "), _c("div", {
-    staticClass: "header-notifications-list"
-  }, [_c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-primary text-primary"
-  }, [_c("i", {
-    staticClass: "bx bx-group"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("New Customers"), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("14 Sec\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("5 new user registered")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-danger text-danger"
-  }, [_c("i", {
-    staticClass: "bx bx-cart-alt"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("New Orders "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 min\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("You have recived new orders")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-success text-success"
-  }, [_c("i", {
-    staticClass: "bx bx-file"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("24 PDF File"), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("19 min\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("The pdf files generated")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-warning text-warning"
-  }, [_c("i", {
-    staticClass: "bx bx-send"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Time Response "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("28 min\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("5.1 min avarage time response")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-info text-info"
-  }, [_c("i", {
-    staticClass: "bx bx-home-circle"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("New Product Approved "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 hrs ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Your new product has approved")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-danger text-danger"
-  }, [_c("i", {
-    staticClass: "bx bx-message-detail"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("New Comments "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("4 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("New customer comments recived")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-success text-success"
-  }, [_c("i", {
-    staticClass: "bx bx-check-square"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Your item is shipped "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("5 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Successfully shipped your item")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-primary text-primary"
-  }, [_c("i", {
-    staticClass: "bx bx-user-pin"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("New 24 authors"), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("1 day\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("24 new authors joined last week")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "notify bg-light-warning text-warning"
-  }, [_c("i", {
-    staticClass: "bx bx-door-open"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Defense Alerts "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 weeks\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("45% less alerts last 4 weeks")])])])])]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "text-center msg-footer"
-  }, [_vm._v("View All Notifications")])])])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item dropdown dropdown-large"
-  }, [_c("a", {
-    staticClass: "nav-link dropdown-toggle dropdown-toggle-nocaret position-relative",
-    attrs: {
-      href: "#",
-      role: "button",
-      "data-bs-toggle": "dropdown",
-      "aria-expanded": "false"
-    }
-  }, [_c("span", {
-    staticClass: "alert-count"
-  }, [_vm._v("8")]), _vm._v(" "), _c("i", {
-    staticClass: "bx bx-comment"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "dropdown-menu dropdown-menu-end"
-  }, [_c("a", {
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "msg-header"
-  }, [_c("p", {
-    staticClass: "msg-header-title"
-  }, [_vm._v("Messages")]), _vm._v(" "), _c("p", {
-    staticClass: "msg-header-clear ms-auto"
-  }, [_vm._v("Marks all as read")])])]), _vm._v(" "), _c("div", {
-    staticClass: "header-message-list"
-  }, [_c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-1.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Daisy Anderson "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("5 sec\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("The standard chunk of lorem")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-2.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Althea Cabardo "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("14\n                                    sec ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Many desktop publishing packages")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-3.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Oscar Garner "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("8 min\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Various versions have evolved over")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-4.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Katherine Pechon "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("15\n                                    min ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Making this the first true generator")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-5.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Amelia Doe "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("22 min\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Duis aute irure dolor in reprehenderit")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-6.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Cristina Jhons "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("The passage is attributed to an unknown")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-7.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("James Caviness "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("4 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("The point of using Lorem")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-8.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Peter Costanzo "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("6 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("It was popularised in the 1960s")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-9.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("David Buckley "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 hrs\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("Various versions have evolved over")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-10.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Thomas Wheeler "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("2 days\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("If you are going to use a passage")])])])]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "d-flex align-items-center"
-  }, [_c("div", {
-    staticClass: "user-online"
-  }, [_c("img", {
-    staticClass: "msg-avatar",
-    attrs: {
-      src: "assets/images/avatars/avatar-11.png",
-      alt: "user avatar"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "flex-grow-1"
-  }, [_c("h6", {
-    staticClass: "msg-name"
-  }, [_vm._v("Johnny Seitz "), _c("span", {
-    staticClass: "msg-time float-end"
-  }, [_vm._v("5 days\n                                    ago")])]), _vm._v(" "), _c("p", {
-    staticClass: "msg-info"
-  }, [_vm._v("All the Lorem Ipsum generators")])])])])]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("div", {
-    staticClass: "text-center msg-footer"
-  }, [_vm._v("View All Messages")])])])])])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("div", {
     staticClass: "user-box dropdown border-light-2"
   }, [_c("a", {
-    staticClass: "d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret",
+    staticClass: "d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret text-white show",
     attrs: {
       href: "#",
       role: "button",
       "data-bs-toggle": "dropdown",
-      "aria-expanded": "false"
+      "aria-expanded": "true"
     }
   }, [_c("img", {
     staticClass: "user-img",
@@ -6549,7 +5924,10 @@ var staticRenderFns = [function () {
   }, [_vm._v("Pauline Seitz")]), _vm._v(" "), _c("p", {
     staticClass: "designattion mb-0"
   }, [_vm._v("Web Designer")])])]), _vm._v(" "), _c("ul", {
-    staticClass: "dropdown-menu dropdown-menu-end"
+    staticClass: "dropdown-menu dropdown-menu-end show",
+    attrs: {
+      "data-bs-popper": "none"
+    }
   }, [_c("li", [_c("a", {
     staticClass: "dropdown-item",
     attrs: {
@@ -6921,24 +6299,16 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "wrapper"
   }, [_c("div", {
-    staticClass: "authentication-header"
-  }), _vm._v(" "), _c("div", {
     staticClass: "section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0"
   }, [_c("div", {
     staticClass: "container-fluid"
   }, [_c("div", {
-    staticClass: "row row-cols-1 row-cols-lg-2 row-cols-xl-3"
+    staticClass: "row row-cols-1 row-cols-lg-2 row-cols-xl-2"
   }, [_c("div", {
     staticClass: "col mx-auto"
   }, [_c("div", {
     staticClass: "mb-4 text-center"
-  }, [_c("img", {
-    attrs: {
-      src: "assets/images/logo-img.png",
-      width: "180",
-      alt: ""
-    }
-  })]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("div", {
     staticClass: "card"
   }, [_c("div", {
     staticClass: "card-body"
@@ -6966,14 +6336,7 @@ var staticRenderFns = [function () {
       width: "16",
       alt: "Image Description"
     }
-  }), _vm._v(" "), _c("span", [_vm._v("Sign in with Google")])])]), _vm._v(" "), _c("a", {
-    staticClass: "btn btn-facebook",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("i", {
-    staticClass: "bx bxl-facebook"
-  }), _vm._v("Sign in with Facebook")])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("span", [_vm._v("Sign in with Google")])])])]), _vm._v(" "), _c("div", {
     staticClass: "login-separater text-center mb-4"
   }, [_c("span", [_vm._v("OR SIGN IN WITH EMAIL")]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("div", {
     staticClass: "form-body"
@@ -7006,21 +6369,14 @@ var staticRenderFns = [function () {
       id: "show_hide_password"
     }
   }, [_c("input", {
-    staticClass: "form-control border-end-0",
+    staticClass: "form-control border-end-1",
     attrs: {
       type: "password",
       id: "inputChoosePassword",
       value: "",
       placeholder: "Enter Password"
     }
-  }), _vm._v(" "), _c("a", {
-    staticClass: "input-group-text bg-transparent",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-hide"
-  })])])]), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6"
   }, [_c("div", {
     staticClass: "form-check form-switch"
@@ -7077,17 +6433,15 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "wrapper"
   }, [_c("div", {
-    staticClass: "authentication-header"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "d-flex align-items-center justify-content-center my-5 my-lg-0"
+    staticClass: "section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container-fluid"
   }, [_c("div", {
     staticClass: "row row-cols-1 row-cols-lg-2 row-cols-xl-2"
   }, [_c("div", {
     staticClass: "col mx-auto"
   }, [_c("div", {
-    staticClass: "my-4 text-center"
+    staticClass: "mb-4 text-center"
   }), _vm._v(" "), _c("div", {
     staticClass: "card"
   }, [_c("div", {
@@ -7116,14 +6470,7 @@ var staticRenderFns = [function () {
       width: "16",
       alt: "Image Description"
     }
-  }), _vm._v(" "), _c("span", [_vm._v("Sign Up with Google")])])]), _vm._v(" "), _c("a", {
-    staticClass: "btn btn-facebook",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("i", {
-    staticClass: "bx bxl-facebook"
-  }), _vm._v("Sign Up with Facebook")])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("span", [_vm._v("Sign in with Google")])])])]), _vm._v(" "), _c("div", {
     staticClass: "login-separater text-center mb-4"
   }, [_c("span", [_vm._v("OR SIGN UP WITH EMAIL")]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("div", {
     staticClass: "form-body"
@@ -7184,65 +6531,13 @@ var staticRenderFns = [function () {
       id: "show_hide_password"
     }
   }, [_c("input", {
-    staticClass: "form-control border-end-0",
+    staticClass: "form-control border-end-1",
     attrs: {
       type: "password",
       id: "inputChoosePassword",
-      value: "12345678",
       placeholder: "Enter Password"
     }
-  }), _vm._v(" "), _c("a", {
-    staticClass: "input-group-text bg-transparent",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("i", {
-    staticClass: "bx bx-hide"
-  })])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-12"
-  }, [_c("label", {
-    staticClass: "form-label",
-    attrs: {
-      "for": "inputSelectCountry"
-    }
-  }, [_vm._v("Country")]), _vm._v(" "), _c("select", {
-    staticClass: "form-select",
-    attrs: {
-      id: "inputSelectCountry",
-      "aria-label": "Default select example"
-    }
-  }, [_c("option", {
-    attrs: {
-      selected: ""
-    }
-  }, [_vm._v("India")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "1"
-    }
-  }, [_vm._v("United Kingdom")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "2"
-    }
-  }, [_vm._v("America")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "3"
-    }
-  }, [_vm._v("Dubai")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-12"
-  }, [_c("div", {
-    staticClass: "form-check form-switch"
-  }, [_c("input", {
-    staticClass: "form-check-input",
-    attrs: {
-      type: "checkbox",
-      id: "flexSwitchCheckChecked"
-    }
-  }), _vm._v(" "), _c("label", {
-    staticClass: "form-check-label",
-    attrs: {
-      "for": "flexSwitchCheckChecked"
-    }
-  }, [_vm._v("I read and agree to Terms & Conditions")])])]), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _c("div", {
     staticClass: "col-12"
   }, [_c("div", {
     staticClass: "d-grid"
@@ -7362,17 +6657,13 @@ var render = function render() {
     staticClass: "card"
   }, [_c("div", {
     staticClass: "card-header"
-  }, [_c("button", {
-    staticClass: "btn btn-primary",
-    attrs: {
-      type: "button",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n              Tambah Data\n              ")]), _vm._v(" "), _c("div", {
+  }, [_c("div", {
     staticClass: "row"
   }, [_c("table", {
-    staticClass: "table table-striped table-hover"
+    staticClass: "table table-striped table-hover",
+    attrs: {
+      id: "table_id"
+    }
   }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.items, function (item, index) {
     return _c("tr", {
       key: item.message
@@ -7459,14 +6750,7 @@ var render = function render() {
     staticClass: "card"
   }, [_c("div", {
     staticClass: "card-header"
-  }, [_c("button", {
-    staticClass: "btn btn-primary",
-    attrs: {
-      type: "button",
-      "data-bs-toggle": "modal",
-      "data-bs-target": "#staticBackdrop"
-    }
-  }, [_vm._v("\n              Tambah Data\n              ")]), _vm._v(" "), _c("div", {
+  }, [_c("div", {
     staticClass: "row"
   }, [_c("table", {
     staticClass: "table table-striped table-hover"
@@ -7753,7 +7037,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [{
-  path: "/",
+  path: "/candidate",
   name: 'candidate',
   component: _components_pages_CandidateComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
@@ -7773,7 +7057,7 @@ var routes = [{
   name: 'dashboard',
   component: _components_pages_DashboardComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
-  path: "/login",
+  path: "/",
   name: 'login',
   component: _components_pages_LoginComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
