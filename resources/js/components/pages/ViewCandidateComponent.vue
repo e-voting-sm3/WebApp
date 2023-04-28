@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <sidebar-component/>
+		<header-component/>
     <div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
@@ -24,6 +27,8 @@
         <!--end row-->
       </div>
     </div>
+
+  </div>
   </template>
   
   <script>

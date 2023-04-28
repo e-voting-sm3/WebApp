@@ -10,7 +10,7 @@ import TableVoterPage from './components/pages/TableVoter.vue'
 
 export const routes = [
     {
-        path: "/candidate",
+        path: "/",
         name: 'candidate',
         component: CandidatePage 
     },

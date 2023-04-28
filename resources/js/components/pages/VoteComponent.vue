@@ -1,35 +1,37 @@
 <template>
-  <div class="page-wrapper">
-    <div class="page-content">
-      <h6 class="mb-0 text-uppercase">Vote</h6>
-      <hr />
-      <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
-        <div class="col" v-for="(item, index) in candidates" :key="item.message">
-          <div class="card radius-15">
-            <div class="card-body text-center">
-              <div class="p-4 border radius-15">
+  <div>
+    <sidebar-component/>
+		<header-component/>
+    <div class="page-wrapper">
+      <div class="page-content">
+        <h6 class="mb-0 text-uppercase">Vote</h6>
+        <hr />
+        
+        <div v-for="item in candidates" :key="item.message">
+          <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4">
                 <img
-                 :src="'/storage/image/' + item.photo"
-                  width="110"
-                  height="110"
-                  class="rounded-circle shadow"
+                  :src="'/storage/image/' + item.photo"
+                  width="187"
+                  height="187"
                   alt=""
                 />
-                <h1 class="mt-2">0{{index+1}}</h1>
-                <h5 class="mb-0 mt-2">{{item.name}}</h5>
-                <div class="d-grid">
-                    <div class="row">
-                        <div class="col-sm-6 text-start">
-                            <router-link
-                                :to="{ name: 'view', params: { id: item.id } }"
-                                class="btn btn-outline-warning"
-                                >Detail</router-link
-                            >
-                        </div>
-                        <div class="col-sm-6 text-end">
-                            <a href="#" class="btn btn-outline-danger" onclick="vote(item.id)">Vote</a>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }}</h5>
+                  <p class="card-text">
+                    {{item.visi_misi}}
+                  </p>
+                  <div class="mt-5 mb-3 float-end">
+                    <a
+                      href="#"
+                      class="btn btn-outline-danger"
+                      onclick="vote(item.id)"
+                      >Vote</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -37,12 +39,13 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
   
   <script>
 export default {
-    data() {
+  data() {
     return {
       candidates: [],
     };
@@ -51,11 +54,9 @@ export default {
     async fetchData() {
       const response = await axios.get("/api/candidates");
       this.candidates = response.data.data;
-      console.log(this.candidates)
+      console.log(this.candidates);
     },
-    vote(id){
-
-    }
+    vote(id) {},
   },
   created() {
     // Panggil method fetchData saat pertama kali dijalankan
