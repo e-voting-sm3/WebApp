@@ -26,6 +26,7 @@ Route::group([
     ], function () {
         Route::apiResource('candidates', CandidateController::class);
         Route::apiResource('voters', VoterController::class);
+
         Route::apiResource('time', TimingVoteController::class);
         Route::get('votes', [VoteController::class,'index']);
         Route::post('votes', [VoteController::class,'store']);

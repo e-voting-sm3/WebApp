@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <sidebar-component/>
+		<header-component/>
     <div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
@@ -28,8 +31,8 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="form.visi_misi"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-md btn-primary">SAVE</button>
-              <button type="reset" class="btn btn-md btn-primary">RESET</button>
+              <button type="submit" class="btn btn-md btn-primary">Save</button>
+              <button type="reset" class="btn btn-md btn-warning">Reset</button>
             </form>
           </div>
         </div>
@@ -39,6 +42,7 @@
   </div>
 </div>
 </div>
+  </div>
 </template>
 <script>
 import axios from "axios";
