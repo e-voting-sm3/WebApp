@@ -5398,7 +5398,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      email: "",
+      password: ""
+    };
+  },
+  methods: {
+    login: function login() {
+      var _this = this;
+      fetch("http://localhost:8000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password
+        })
+      }).then(function (response) {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Login failed.");
+        }
+      }).then(function (data) {
+        // save token to localStorage
+        localStorage.setItem("token", data.token);
+
+        // redirect to candidate or other page
+        _this.$router.push("/candidate");
+      })["catch"](function (error) {
+        console.log(error);
+        // handle login error
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -6291,11 +6328,6 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("div", {
     staticClass: "wrapper"
   }, [_c("div", {
@@ -6314,34 +6346,16 @@ var staticRenderFns = [function () {
     staticClass: "card-body"
   }, [_c("div", {
     staticClass: "p-4 rounded"
-  }, [_c("div", {
-    staticClass: "text-center"
-  }, [_c("h3", {}, [_vm._v("Sign in")]), _vm._v(" "), _c("p", [_vm._v("Don't have an account yet? "), _c("a", {
-    attrs: {
-      href: "/register"
-    }
-  }, [_vm._v("Sign up here")])])]), _vm._v(" "), _c("div", {
-    staticClass: "d-grid"
-  }, [_c("a", {
-    staticClass: "btn my-4 shadow-sm btn-white",
-    attrs: {
-      href: "javascript:;"
-    }
-  }, [_c("span", {
-    staticClass: "d-flex justify-content-center align-items-center"
-  }, [_c("img", {
-    staticClass: "me-2",
-    attrs: {
-      src: "assets/images/icons/search.svg",
-      width: "16",
-      alt: "Image Description"
-    }
-  }), _vm._v(" "), _c("span", [_vm._v("Sign in with Google")])])])]), _vm._v(" "), _c("div", {
-    staticClass: "login-separater text-center mb-4"
-  }, [_c("span", [_vm._v("OR SIGN IN WITH EMAIL")]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("div", {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
     staticClass: "form-body"
   }, [_c("form", {
-    staticClass: "row g-3"
+    staticClass: "row g-3",
+    on: {
+      submit: function submit($event) {
+        $event.preventDefault();
+        return _vm.login.apply(null, arguments);
+      }
+    }
   }, [_c("div", {
     staticClass: "col-12"
   }, [_c("label", {
@@ -6350,11 +6364,26 @@ var staticRenderFns = [function () {
       "for": "inputEmailAddress"
     }
   }, [_vm._v("Email Address")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.email,
+      expression: "email"
+    }],
     staticClass: "form-control",
     attrs: {
       type: "email",
       id: "inputEmailAddress",
       placeholder: "Email Address"
+    },
+    domProps: {
+      value: _vm.email
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.email = $event.target.value;
+      }
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "col-12"
@@ -6369,14 +6398,61 @@ var staticRenderFns = [function () {
       id: "show_hide_password"
     }
   }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.password,
+      expression: "password"
+    }],
     staticClass: "form-control border-end-1",
     attrs: {
       type: "password",
       id: "inputChoosePassword",
-      value: "",
       placeholder: "Enter Password"
+    },
+    domProps: {
+      value: _vm.password
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.password = $event.target.value;
+      }
     }
-  })])]), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("div", {
+    staticClass: "col-12"
+  }, [_c("div", {
+    staticClass: "d-grid"
+  }, [_c("button", {
+    staticClass: "btn btn-primary",
+    attrs: {
+      type: "submit",
+      disabled: !_vm.email || !_vm.password
+    }
+  }, [_c("i", {
+    staticClass: "bx bxs-lock-open"
+  }), _vm._v("Sign in\n\t\t\t\t\t\t")])])])])])])])])])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "text-center"
+  }, [_c("h3", {}, [_vm._v("Sign in")]), _vm._v(" "), _c("p", [_vm._v("\n\t\t\t\t\tDon't have an account yet?\n\t\t\t\t\t"), _c("a", {
+    attrs: {
+      href: "/register"
+    }
+  }, [_vm._v("Sign up here")])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "login-separater text-center mb-4"
+  }, [_c("span", [_vm._v("SIGN IN WITH EMAIL")]), _vm._v(" "), _c("hr")]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "col-md-6"
   }, [_c("div", {
     staticClass: "form-check form-switch"
@@ -6392,18 +6468,7 @@ var staticRenderFns = [function () {
     attrs: {
       "for": "flexSwitchCheckChecked"
     }
-  }, [_vm._v("Remember Me")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-12"
-  }, [_c("div", {
-    staticClass: "d-grid"
-  }, [_c("button", {
-    staticClass: "btn btn-primary",
-    attrs: {
-      type: "submit"
-    }
-  }, [_c("i", {
-    staticClass: "bx bxs-lock-open"
-  }), _vm._v("Sign in")])])])])])])])])])])])])]);
+  }, [_vm._v("Remember Me")])])]);
 }];
 render._withStripped = true;
 
@@ -7057,7 +7122,7 @@ var routes = [{
   name: 'dashboard',
   component: _components_pages_DashboardComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
-  path: "/",
+  path: "/login",
   name: 'login',
   component: _components_pages_LoginComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
