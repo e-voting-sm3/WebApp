@@ -7,6 +7,7 @@ use App\Http\Controllers\VoterController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TimingVoteController;
+use App\Http\Controllers\UserController;
 
 Route::group([
   'prefix' => 'auth'
@@ -25,7 +26,7 @@ Route::group([
       'middleware' => 'auth:api'
     ], function () {
         Route::apiResource('candidates', CandidateController::class);
-        Route::apiResource('voters', VoterController::class);
+        Route::apiResource('voters', UserController::class);
 
         Route::apiResource('time', TimingVoteController::class);
         Route::get('votes', [VoteController::class,'index']);

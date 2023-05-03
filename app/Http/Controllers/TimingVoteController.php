@@ -11,7 +11,7 @@ class TimingVoteController extends Controller
 {
     public function index()
     {
-        $timingVotes = TimingVote::all();
+        $timingVotes = TimingVote::get();
 
         return response()->json([
             'data' => $timingVotes

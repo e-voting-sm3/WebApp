@@ -35,7 +35,12 @@
                             </td>
                             <td>
                               <a  data-bs-toggle="modal"  class="btn btn-sm btn-warning">EDIT</a>
-                              <a  data-bs-toggle="modal" class="btn btn-sm btn-danger">DELETE</a>
+                              <button
+                                @click="deleteItem(item.id)"
+                                class="btn btn-outline-danger"
+                              >
+                                DELETE
+                              </button>
                             </td> 
                           </tr> 
                       </tbody>
@@ -50,7 +55,8 @@
   </template>
 
 <script>
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+import axios from "axios";
 
 export default {
   // components: { HeaderComponent },
@@ -61,12 +67,15 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("/api/candidates");
+      const response = await axios.get("/api/auth/candidates",{
+        headers:{
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
       this.items = response.data.data;
     },
     async deleteItem(id) {
-
-      const result = await Swal.fire({
+  const result = await Swal.fire({
     title: 'Apakah Anda yakin ingin menghapus data ini?',
     icon: 'warning',
     showCancelButton: true,
@@ -75,36 +84,26 @@ export default {
     confirmButtonText: 'Hapus',
     cancelButtonText: 'Batal'
   });
-  
+
   if (result.isConfirmed) {
-    // Jika user mengklik tombol "Hapus"
-    // Lakukan proses delete
-    axios
-        .delete(`/api/candidate/${id}`)
-        .then((response) => {
-          // Berhasil dihapus dari server, lakukan aksi selanjutnya jika diperlukan
-          console.log(response.data);
-          this.fetchData();
-        })
-        .catch((error) => {
-          // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
-          console.error(error);
-        });
-    
-    // Tampilkan SweetAlert2 jika proses delete berhasil
-    // await Swal.fire({
-    //   title: 'Data berhasil dihapus!',
-    //   icon: 'success',
-    //   timer: 1500,
-    //   timerProgressBar: true,
-    //   showConfirmButton: false
-    // });
-    
-    // Redirect ke halaman tertentu
-    this.$router.push('/candidate');
+    try {
+      // Jika user mengklik tombol "Hapus", lakukan proses delete
+      await axios.delete(`/api/auth/candidates/${id}`, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
+      // Berhasil dihapus dari server, lakukan aksi selanjutnya jika diperlukan
+      console.log('Data berhasil dihapus');
+      this.fetchData();
+    } catch (error) {
+      // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
+      console.error(error);
+    }
+    this.$router.push('/tablecandidate');
   }
-      
-    },
+},
+
   },
   created() {
     // Panggil method fetchData saat pertama kali dijalankan

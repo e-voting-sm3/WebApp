@@ -65,7 +65,11 @@ export default {
       formData.append("photo", this.form.photo); // tambahkan field image ke objek FormData
 
       axios
-        .post("/api/candidates", formData)
+        .post("/api/auth/candidates", formData,{
+          headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+          }
+        })
         .then((response) => {
           console.log(response);
           // reset form

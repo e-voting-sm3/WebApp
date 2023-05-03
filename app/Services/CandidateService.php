@@ -59,16 +59,23 @@ class CandidateService
         //     'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         // ]);
 
-        $candidateData = [
-            'name' => $request->name,
-            'visi_misi' => $request->input('visi_misi'),
-        ];
+        // alternatif
+        // $candidateData = [
+        //     'name' => $request->name,
+        //     'visi_misi' => $request->input('visi_misi'),
+        // ];
 
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $photo->storeAs('public/image', $photo->hashName());
 
-            $candidateData['photo'] = $photo->hashName();
+            $candidateData = [
+                'name' => $request->name,
+                'visi_misi' => $request->input('visi_misi'),
+                'photo' => $photo->hashName()
+            ];
+            
+            // $candidateData['photo'] = $photo->hashName();
 
             // delete old photo
             $candidate = $this->candidateRepository->getCandidateById($id);
