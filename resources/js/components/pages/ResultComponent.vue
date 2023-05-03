@@ -19,8 +19,8 @@
 									</div>
 									<div class="col">
 										<p class="mb-2">0{{item.candidate_id}} <strong class="float-end">{{ item.total_votes }}</strong></p>
-										<div class="progress radius-10" style="height:6px;">
-											<div class="progress-bar bg-gradient-blues" role="progressbar" :style="{ width: item.total_votes + '%' }"></div>
+										<div class="progress radius-10" style="height:16px;">
+											<div class="progress-bar bg-gradient-blues" role="progressbar" :style="{ width: item.total_votes + '%' }">{{ item.total_votes }}%</div>
 										</div>
 									</div>
 								</div>
@@ -45,49 +45,12 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("/api/votes");
+      const response = await axios.get("/api/auth/votes",{
+        headers:{
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
       this.items = response.data.data;
-    },
-    async deleteItem(id) {
-
-      const result = await Swal.fire({
-    title: 'Apakah Anda yakin ingin menghapus data ini?',
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#d33',
-    cancelButtonColor: '#3085d6',
-    confirmButtonText: 'Hapus',
-    cancelButtonText: 'Batal'
-  });
-  
-  if (result.isConfirmed) {
-    // Jika user mengklik tombol "Hapus"
-    // Lakukan proses delete
-    axios
-        .delete(`/api/candidate/${id}`)
-        .then((response) => {
-          // Berhasil dihapus dari server, lakukan aksi selanjutnya jika diperlukan
-          console.log(response.data);
-          this.fetchData();
-        })
-        .catch((error) => {
-          // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
-          console.error(error);
-        });
-    
-    // Tampilkan SweetAlert2 jika proses delete berhasil
-    // await Swal.fire({
-    //   title: 'Data berhasil dihapus!',
-    //   icon: 'success',
-    //   timer: 1500,
-    //   timerProgressBar: true,
-    //   showConfirmButton: false
-    // });
-    
-    // Redirect ke halaman tertentu
-    this.$router.push('/candidate');
-  }
-      
     },
   },
   created() {

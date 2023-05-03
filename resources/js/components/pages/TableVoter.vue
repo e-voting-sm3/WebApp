@@ -16,7 +16,6 @@
                       <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">NRP</th>
                         <th scope="col">Email</th>
                         <th scope="col">Aksi</th>
                       </tr>
@@ -25,12 +24,16 @@
                           <tr v-for="(item, index) in items" :key="item.message">
                             <th scope="row">{{ index + 1 }}</th>
                             <td>{{ item.name}}</td>
-                            <td>{{ item.nrp}}</td>
                             <td>{{ item.email}}</td>
                             
                             <td>
                               <a  data-bs-toggle="modal"  class="btn btn-sm btn-warning">EDIT</a>
-                              <a  data-bs-toggle="modal" class="btn btn-sm btn-danger">DELETE</a>
+                              <button
+                                @click="deleteItem(item.id)"
+                                class="btn btn-outline-danger"
+                              >
+                                DELETE
+                              </button>
                             </td> 
                           </tr> 
                       </tbody>
@@ -44,7 +47,8 @@
   </template>
 
 <script>
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+import axios from "axios";
 
 export default {
   // components: { HeaderComponent },
@@ -63,8 +67,7 @@ export default {
       this.items = response.data.data;
     },
     async deleteItem(id) {
-
-      const result = await Swal.fire({
+  const result = await Swal.fire({
     title: 'Apakah Anda yakin ingin menghapus data ini?',
     icon: 'warning',
     showCancelButton: true,
@@ -73,36 +76,25 @@ export default {
     confirmButtonText: 'Hapus',
     cancelButtonText: 'Batal'
   });
-  
+
   if (result.isConfirmed) {
-    // Jika user mengklik tombol "Hapus"
-    // Lakukan proses delete
-    axios
-        .delete(`/api/voters/${id}`)
-        .then((response) => {
-          // Berhasil dihapus dari server, lakukan aksi selanjutnya jika diperlukan
-          console.log(response.data);
-          this.fetchData();
-        })
-        .catch((error) => {
-          // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
-          console.error(error);
-        });
-    
-    // Tampilkan SweetAlert2 jika proses delete berhasil
-    // await Swal.fire({
-    //   title: 'Data berhasil dihapus!',
-    //   icon: 'success',
-    //   timer: 1500,
-    //   timerProgressBar: true,
-    //   showConfirmButton: false
-    // });
-    
-    // Redirect ke halaman tertentu
-    this.$router.push('/candidate');
+    try {
+      // Jika user mengklik tombol "Hapus", lakukan proses delete
+      await axios.delete(`/api/auth/voters/${id}`, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
+      // Berhasil dihapus dari server, lakukan aksi selanjutnya jika diperlukan
+      console.log('Data berhasil dihapus');
+      this.fetchData();
+    } catch (error) {
+      // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
+      console.error(error);
+    }
+    this.$router.push('/tablecandidate');
   }
-      
-    },
+},
   },
   created() {
     // Panggil method fetchData saat pertama kali dijalankan

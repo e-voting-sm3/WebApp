@@ -4,6 +4,7 @@ namespace App\Repositories;
 use Illuminate\Support\Facades\DB;
 use App\Models\Vote;
 use App\Models\Voter;
+use App\Models\User;
 use App\Models\Candidate;
 
 class VoteRepository
@@ -16,14 +17,22 @@ class VoteRepository
   }
 
   public function getResults()
-  {
-      $results = DB::table('votes')
-                  ->select('candidate_id', DB::raw('count(voter_id) as total_votes'))
-                  ->groupBy('candidate_id')
-                  ->get();
+{
+    $total_votes = DB::table('votes')->count();
 
-      return $results;
-  }
+    $results = DB::table('votes')
+        ->select('candidate_id', DB::raw('count(voter_id) as total_votes'))
+        ->groupBy('candidate_id')
+        ->get();
+
+    foreach ($results as $result) {
+        $percentage = ($result->total_votes / $total_votes) * 100;
+        $result->total_votes = $percentage;
+    }
+
+    return $results;
+}
+
 
 
 

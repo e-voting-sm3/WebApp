@@ -1,18 +1,24 @@
 import CandidatePage from './components/pages/CandidateComponent.vue'
 import VotePage from './components/pages/VoteComponent.vue'
 import ResultPage from './components/pages/ResultComponent.vue'
-import ViewCandidatePage from './components/pages/ViewCandidateComponent.vue'
+// import ViewCandidatePage from './components/pages/ViewCandidateComponent.vue'
 import DashboardPage from './components/pages/DashboardComponent.vue'
 import LoginPage from './components/pages/LoginComponent.vue'
 import RegisterPage from './components/pages/RegisterComponent.vue'
 import TableCandidatePage from './components/pages/TableCandidate.vue'
 import TableVoterPage from './components/pages/TableVoter.vue'
+import CreateCandidate from './components/pages/CreateCandidate'
 
 export const routes = [
     {
         path: "/candidate",
         name: 'candidate',
         component: CandidatePage 
+    },
+    {
+        path: "/createcandidate",
+        name: 'candidate',
+        component: CreateCandidate 
     },
     {
         path: "/vote",
@@ -24,11 +30,11 @@ export const routes = [
         name: 'result',
         component: ResultPage
     },
-    {
-        path: "/view",
-        name: 'view',
-        component: ViewCandidatePage
-    },
+    // {
+    //     path: "/view",
+    //     name: 'view',
+    //     component: ViewCandidatePage
+    // },
     {
         path: "/dashboard",
         name: 'dashboard',
