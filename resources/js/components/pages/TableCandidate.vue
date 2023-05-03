@@ -61,7 +61,11 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("/api/candidates");
+      const response = await axios.get("/api/auth/candidates",{
+        headers:{
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
       this.items = response.data.data;
     },
     async deleteItem(id) {

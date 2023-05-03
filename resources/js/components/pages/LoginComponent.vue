@@ -20,7 +20,7 @@
 					  <hr />
 					</div>
 					<div class="form-body">
-					  <form class="row g-3" @submit.prevent="login">
+					  <form class="row g-3" @submit.prevent="handleSubmit">
 						<div class="col-12">
 						  <label for="inputEmailAddress" class="form-label"
 							>Email Address</label
@@ -88,6 +88,7 @@
 
 
 <script>
+import axios from 'axios';
 export default {
   data: () => {
     return {
@@ -96,36 +97,47 @@ export default {
     };
   },
   methods: {
-    login() {
-      fetch("http://localhost:8000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: this.email,
-          password: this.password,
-        }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error("Login failed.");
-          }
-        })
-        .then((data) => {
-          // save token to localStorage
-          localStorage.setItem("token", data.token);
+	async handleSubmit()
+	{
+		const response = await axios.post('http://localhost:8000/api/auth/login',{
+			email: this.email,
+			password: this.password
+		});
 
-          // redirect to candidate or other page
-          this.$router.push("/candidate");
-        })
-        .catch((error) => {
-          console.log(error);
-          // handle login error
-        });
-    },
+		localStorage.setItem('token', response.data.access_token);
+		this.$router.push("/candidate");
+	}
+
+    // login() {
+    //   fetch("http://localhost:8000/api/auth/login", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       email: this.email,
+    //       password: this.password,
+    //     }),
+    //   })
+    //     .then((response) => {
+    //       if (response.ok) {
+    //         return response.json();
+    //       } else {
+    //         throw new Error("Login failed.");
+    //       }
+    //     })
+    //     .then((data) => {
+    //       // save token to localStorage
+    //       localStorage.setItem("token", data.token);
+
+    //       // redirect to candidate or other page
+    //       this.$router.push("/candidate");
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //       // handle login error
+    //     });
+    // },
   },
 };
 </script>

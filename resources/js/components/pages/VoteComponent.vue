@@ -52,7 +52,11 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("/api/candidates");
+      const response = await axios.get('http://localhost:8000/api/auth/candidates', {
+        headers:{
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      });
       this.candidates = response.data.data;
       console.log(this.candidates);
     },
@@ -63,6 +67,7 @@ export default {
     this.fetchData();
   },
 };
+
 </script>
   
   <style>

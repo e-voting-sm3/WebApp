@@ -35,7 +35,7 @@ export const routes = [
         component: DashboardPage
     },
     {
-        path: "/login",
+        path: "/",
         name: 'login',
         component: LoginPage
     },
