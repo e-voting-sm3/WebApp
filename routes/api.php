@@ -25,10 +25,19 @@ Route::group([
     Route::group([
       'middleware' => 'auth:api'
     ], function () {
-        Route::apiResource('candidates', CandidateController::class);
+        Route::get('candidates', [CandidateController::class,'index']);
+        Route::get('candidates/{id}', [CandidateController::class,'show']);
+        Route::post('candidates', [CandidateController::class,'store']);
+        Route::post('candidates/{id}', [CandidateController::class,'update']);
+        Route::delete('candidates/{id}', [CandidateController::class,'destroy']);
+        // Route::apiResource('candidates', CandidateController::class);
+
         Route::apiResource('voters', UserController::class);
 
-        Route::apiResource('time', TimingVoteController::class);
+        Route::get('time', [TimingVoteController::class,'index']);
+        Route::get('time/{id}', [TimingVoteController::class,'show']);
+        Route::post('time/{id}', [TimingVoteController::class,'update']);
+
         Route::get('votes', [VoteController::class,'index']);
         Route::post('votes', [VoteController::class,'store']);
     });

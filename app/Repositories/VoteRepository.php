@@ -17,21 +17,19 @@ class VoteRepository
   }
 
   public function getResults()
-{
-    $total_votes = DB::table('votes')->count();
-
-    $results = DB::table('votes')
-        ->select('candidate_id', DB::raw('count(voter_id) as total_votes'))
-        ->groupBy('candidate_id')
-        ->get();
-
-    foreach ($results as $result) {
-        $percentage = ($result->total_votes / $total_votes) * 100;
-        $result->total_votes = $percentage;
-    }
-
-    return $results;
-}
+  {
+      $total_votes = DB::table('votes')->count();
+  
+      $results = DB::table('candidates')
+          ->leftJoin('votes', 'candidates.id', '=', 'votes.candidate_id')
+          ->select('candidates.id', 'candidates.photo', 'candidates.name', DB::raw('IFNULL(ROUND((COUNT(votes.voter_id) / '.$total_votes.') * 100), 0) as percentage'))
+          ->groupBy('candidates.id', 'candidates.photo', 'candidates.name')
+          ->get();
+  
+      return $results;
+  }
+  
+  
 
 
 
