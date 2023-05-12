@@ -105,7 +105,7 @@ export default {
 		});
 
 		localStorage.setItem('token', response.data.access_token);
-		this.$router.push("/vote");
+		this.$router.push("/candidate");
 	}
 
     // login() {

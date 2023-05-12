@@ -27,7 +27,7 @@
                             <td>{{ item.email}}</td>
                             
                             <td>
-                              <a  data-bs-toggle="modal"  class="btn btn-sm btn-warning">EDIT</a>
+                              <!-- <a  data-bs-toggle="modal"  class="btn btn-sm btn-warning">EDIT</a> -->
                               <button
                                 @click="deleteItem(item.id)"
                                 class="btn btn-outline-danger"
@@ -92,7 +92,7 @@ export default {
       // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
       console.error(error);
     }
-    this.$router.push('/tablecandidate');
+    this.$router.push('/voter');
   }
 },
   },
