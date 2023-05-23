@@ -34,7 +34,8 @@ class VoteController extends Controller
             $votes = $this->voteService->getResults();
 
             return response()->json([
-                'data' => $votes
+                'data' => $votes,
+                'message' => 'success'
             ]);
         } else {
             return response()->json([
@@ -60,9 +61,13 @@ class VoteController extends Controller
                 'startTime' => $startTime->toIso8601String(),
                 'endTime' => $endTime->toIso8601String(),
                 'current_time' => $current_time->toIso8601String(),
+                'status' => 403,
             ]);
         } elseif ($current_time->isAfter($endTime)) {
-            return response()->json(['message' => 'Maaf, waktu pemilihan sudah berakhir.']);
+            return response()->json([
+                'message' => 'Maaf, waktu pemilihan sudah berakhir.',
+                'status' => 403,
+            ]);
         } else {
             $validatedData = $request->validate([
                 'voter_id' => 'required',
@@ -72,7 +77,7 @@ class VoteController extends Controller
             $vote = $this->voteService->voteCandidate($request);
 
             return response()->json([
-                'data' => $vote
+                'message' => $vote
             ]);
         }
     }

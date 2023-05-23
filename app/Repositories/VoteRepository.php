@@ -43,13 +43,13 @@ class VoteRepository
       $hasVoted = $this->votes->where('voter_id', $voterId)->exists();
       
       if ($hasVoted) {
-          return response()->json(['message' => 'You have already voted'], 400);
+          return 'You have already voted';
       }
       
       // cek apakah kandidatnya ada
       $candidate = Candidate::find($candidateId);
       if (!$candidate) {
-          return response()->json(['message' => 'Candidate not found'], 404);
+          return 'Candidate not found';
       }
       
       // vote
@@ -58,7 +58,7 @@ class VoteRepository
           'candidate_id' => $candidateId,
       ]);
       
-      return response()->json(['message' => 'Vote submitted successfully']);
+      return 'Vote submitted successfully';
   }
 
 }
