@@ -19,7 +19,7 @@ Route::group([
   ], function(){
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
-    Route::post('me', [AuthController::class,'me']);
+    Route::get('me', [AuthController::class,'me']);
 
     // voting process
     Route::group([
@@ -44,7 +44,7 @@ Route::group([
     
   });
 });
-
+Route::get('candidates', [CandidateController::class,'index']);
 // tanpa auth
 // Route::apiResource('candidates', CandidateController::class);
 // Route::apiResource('voters', VoterController::class);

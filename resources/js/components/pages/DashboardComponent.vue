@@ -1,4 +1,9 @@
 <template>
+    <div>
+        <sidebar-component/>
+		<header-component/>
+
+    
     <div class="page-wrapper">
               <div class="page-content">
                   <!--breadcrumb-->
@@ -23,7 +28,7 @@
     
           
 
-        
+        </div>
 
 </template>
 
