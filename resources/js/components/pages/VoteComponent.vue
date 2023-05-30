@@ -54,7 +54,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const response = await axios.get('http://localhost:8000/api/auth/candidates', {
+        const response = await axios.get('http://voting.surabayawebtech.com/api/auth/candidates', {
           headers:{
             Authorization: 'Bearer ' + localStorage.getItem('token')
           }
@@ -62,7 +62,7 @@ export default {
         this.candidates = response.data.data;
         console.log(this.candidates);
 
-        const meResponse = await axios.post('http://localhost:8000/api/auth/me', {}, {
+        const meResponse = await axios.post('http://voting.surabayawebtech.com/api/auth/me', {}, {
           headers:{
             Authorization: 'Bearer ' + localStorage.getItem('token')
           }
@@ -75,7 +75,7 @@ export default {
     },
     async vote(candidateId) {
       try {
-        const response = await axios.post('http://localhost:8000/api/auth/votes', {
+        const response = await axios.post('http://voting.surabayawebtech.com/api/auth/votes', {
           voter_id: this.userId,
           candidate_id: candidateId
         }, {
