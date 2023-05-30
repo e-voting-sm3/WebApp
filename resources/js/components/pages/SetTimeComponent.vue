@@ -64,7 +64,7 @@ export default {
   methods: {
     async fetchData() {
       this.itemID = this.$route.params.id;
-      const response = await axios.get(`/api/auth/time/${this.itemID}`, {
+      const response = await axios.get(`http://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -86,7 +86,7 @@ export default {
       console.log('awal :' + startDateTime);
       console.log('akhir :' + endDateTime);
       axios
-        .post(`/api/auth/time/${this.itemID}`, formData, {
+        .post(`http://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, formData, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

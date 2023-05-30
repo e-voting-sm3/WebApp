@@ -48,7 +48,7 @@ export default {
     async fetchData() {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/auth/time",
+          "http://voting.surabayawebtech.com/api/auth/time",
           {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),

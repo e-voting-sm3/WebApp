@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("/api/auth/voters",{
+      const response = await axios.get("http://voting.surabayawebtech.com/api/auth/voters",{
         headers:{
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -80,7 +80,7 @@ export default {
   if (result.isConfirmed) {
     try {
       // Jika user mengklik tombol "Hapus", lakukan proses delete
-      await axios.delete(`/api/auth/voters/${id}`, {
+      await axios.delete(`http://voting.surabayawebtech.com/api/auth/voters/${id}`, {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
