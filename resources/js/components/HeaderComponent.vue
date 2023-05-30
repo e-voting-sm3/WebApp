@@ -13,7 +13,7 @@
                                 <p class="designattion mb-0">Web Designer</p>
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end show" data-bs-popper="none">
+                        <!-- <ul class="dropdown-menu dropdown-menu-end show" data-bs-popper="none">
                             <li><a class="dropdown-item" href="http://127.0.0.1:8000/user-profile"><i class="bx bx-user"></i><span>Profile</span></a>
                             </li>
                             <li><a class="dropdown-item" href="http://127.0.0.1:8000/ecommerce-orders"><i class="bx bx-cog"></i><span>Orders</span></a>
@@ -29,7 +29,7 @@
                             </li>
                             <li><a class="dropdown-item" href="http://127.0.0.1:8000/authentication-signin"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </nav>
             </div>

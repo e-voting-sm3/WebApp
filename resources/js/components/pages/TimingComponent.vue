@@ -3,7 +3,6 @@
     <sidebar-component />
     <header-component />
     <div class="page-wrapper">
-      <div class="page-content">
         <h6 class="mb-0 text-uppercase">Vote</h6>
         <hr />
 
@@ -35,7 +34,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
   
 <script>
