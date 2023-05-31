@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--favicon-->
-    <link rel="icon" href="assets/images/logo-img.jpeg" type="image/png" />
-    <!--plugins-->
-    <link href="assets/plugins/input-tags/css/tagsinput.css" rel="stylesheet" />
-    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-    <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-    <!-- loader-->
-    <link href="assets/css/pace.min.css" rel="stylesheet" />
-    <script src="assets/js/pace.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet">
-    <link href="assets/css/icons.css" rel="stylesheet">
-
-    <!-- Theme Style CSS -->
-    <link rel="stylesheet" href="assets/css/dark-theme.css" />
-    <link rel="stylesheet" href="assets/css/semi-dark.css" />
-    <link rel="stylesheet" href="assets/css/header-colors.css" />
-    <title>e-voting</title>
-</head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--favicon-->
+        <link rel="icon" href="assets/images/logo-img.jpeg" type="image/png" />
+        <!--plugins-->
+        <link href="assets/plugins/input-tags/css/tagsinput.css" rel="stylesheet" />
+        <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+        <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+        <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+        <link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
+        <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+        <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+        <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+        <!-- loader-->
+        <link href="assets/css/pace.min.css" rel="stylesheet" />
+        <script src="assets/js/pace.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+        <link href="assets/css/app.css" rel="stylesheet">
+        <link href="assets/css/icons.css" rel="stylesheet">
+    
+        <!-- Theme Style CSS -->
+        <link rel="stylesheet" href="assets/css/dark-theme.css" />
+        <link rel="stylesheet" href="assets/css/semi-dark.css" />
+        <link rel="stylesheet" href="assets/css/header-colors.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <title>e-voting</title>
+    </head>
 
 <body class="antialiased">
     <!--wrapper-->
@@ -175,6 +180,18 @@
     <!--app JS-->
     <script src="assets/js/app.js"></script>
     <script src="assets/plugins/input-tags/js/tagsinput.js"></script>
+    <!-- highcharts js -->
+	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
+	<script src="assets/plugins/highcharts/js/variable-pie.js"></script>
+	<script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
+	<script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
+	<script src="assets/plugins/highcharts/js/cylinder.js"></script>
+	<script src="assets/plugins/highcharts/js/funnel3d.js"></script>
+	<script src="assets/plugins/highcharts/js/exporting.js"></script>
+	<script src="assets/plugins/highcharts/js/export-data.js"></script>
+	<script src="assets/plugins/highcharts/js/accessibility.js"></script>
+	<script src="assets/js/index4.js"></script>
 
 </body>
 
