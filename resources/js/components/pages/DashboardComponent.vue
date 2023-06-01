@@ -14,8 +14,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Create Candidate</p>
-										<h4 class="font-weight-bold">32,842 <small class="text-success font-13">(+40%)</small></h4>
+										<p class="mb-0">Waktu Mulai</p>
+										<h4 class="font-weight-bold">{{startTime}}</h4>
 										<p class="text-success mb-0 font-13">Analytics for last week</p>
 									</div>
 									<div class="widgets-icons bg-gradient-cosmic text-white"><i class='bx bx-refresh'></i>
@@ -29,8 +29,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Candidate</p>
-										<h4 class="font-weight-bold">16,352 <small class="text-success font-13">(+22%)</small></h4>
+										<p class="mb-0">Waktu Berakhir</p>
+										<h4 class="font-weight-bold">{{endTime}}</h4>
 										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
 									</div>
 									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-group'></i>
@@ -44,8 +44,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Time on Site</p>
-										<h4 class="font-weight-bold">34m 14s <small class="text-success font-13">(+55%)</small></h4>
+										<p class="mb-0">Jumlah Kandidat</p>
+										<h4 class="font-weight-bold">{{lengthCandidates}}</h4>
 										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white"><i class='bx bx-time'></i>
@@ -59,8 +59,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Goal Completions</p>
-										<h4 class="font-weight-bold">1,94,2335</h4>
+										<p class="mb-0">Sudah memilih</p>
+										<h4 class="font-weight-bold">{{lengthVoterTrue}}</h4>
 										<p class="text-secondary mb-0 font-13">Analytics for last month</p>
 									</div>
 									<div class="widgets-icons bg-gradient-kyoto text-white"><i class='bx bxs-cube'></i>
@@ -74,8 +74,8 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Bounce Rate</p>
-										<h4 class="font-weight-bold">58% <small class="text-danger font-13">(-16%)</small></h4>
+										<p class="mb-0">Belum Memilih</p>
+										<h4 class="font-weight-bold">{{lengthVoterFalse}}<small class="text-danger font-13">(-16%)</small></h4>
 										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
 									</div>
 									<div class="widgets-icons bg-gradient-blues text-white"><i class='bx bx-line-chart'></i>
@@ -243,11 +243,64 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
+	data() {
+		return {
+			time: [],
+			candidates: [],
+			voters: [],
+			startTime: null,
+			endTime: null,
+			lengthCandidates: 0,
+			lengthVoterTrue: 0,
+			lengthVoterFalse: 0,
+		}
+	},
+	methods: {
+		async fetchData() {
+			try {
+				const responseTime = await axios.get("http://localhost:8000/api/auth/time", {
+					headers: {
+						Authorization: 'Bearer ' + localStorage.getItem('token')
+					}
+				});
+				this.time = responseTime.data.data[0];
+				this.startTime = this.time.start_time;
+				this.endTime = this.time.end_time;
+				console.log(responseTime.data)
+				console.log(responseTime.data.data)
+				console.log(responseTime.data.data[0].start_time)
 
+				const responseCandidates = await axios.get("http://localhost:8000/api/auth/candidates", {
+					headers: {
+						Authorization: 'Bearer ' + localStorage.getItem('token')
+					}
+				});
+				this.candidates = responseCandidates.data.data;
+				this.lengthCandidates = this.candidates.length;
+
+				const responseVoters = await axios.get("http://localhost:8000/api/auth/voters", {
+					headers: {
+						Authorization: 'Bearer ' + localStorage.getItem('token')
+					}
+				});
+				this.voters = responseVoters.data.data;
+				this.lengthVoterTrue = this.voters.filter(voter => voter.status === 'true').length;
+				this.lengthVoterFalse = this.voters.filter(voter => voter.status === 'false').length;
+			} catch (error) {
+				console.log(error);
+			}
+		}
+	},
+	created() {
+		// Panggil method fetchData saat pertama kali dijalankan
+		this.fetchData();
+	},
 }
 </script>
+
 
 <style>
 * {

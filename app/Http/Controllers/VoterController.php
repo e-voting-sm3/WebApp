@@ -24,68 +24,42 @@ class VoterController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function getVoterStatusTrue()
     {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'nrp' => 'required|string|max:255',
-            'email' => 'required|email|unique:voters,email',
-        ]);
-
-        $voter = $this->voterService->createVoter($request);
+        $voterTrue = $this->voterService->getVoterStatusTrue();
 
         return response()->json([
-            'data' => $voter
+            'data' => $voterTrue
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function getVoterStatusFalse()
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'nrp' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:voters',
-        ]);
-
-        $voter = Voter::find($id);
-        $voter->name = $request->name;
-        $voter->nrp = $request->nrp;
-        $voter->email = $request->email;
-        $voter->save();
+        $voterFalse = $this->voterService->getVoterStatusFalse();
 
         return response()->json([
-            'data' => $voter
+            'data' => $voterFalse
         ]);
     }
+
+    // public function update(Request $request, $id)
+    // {
+    //     $validatedData = $request->validate([
+    //         'name' => 'required|string|max:255',
+    //         'nrp' => 'required|string|max:255',
+    //         'email' => 'required|string|email|max:255|unique:voters',
+    //     ]);
+
+    //     $voter = Voter::find($id);
+    //     $voter->name = $request->name;
+    //     $voter->nrp = $request->nrp;
+    //     $voter->email = $request->email;
+    //     $voter->save();
+
+    //     return response()->json([
+    //         'data' => $voter
+    //     ]);
+    // }
 
     /**
      * Remove the specified resource from storage.
