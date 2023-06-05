@@ -63,9 +63,9 @@ export const routes = [
         name:"time",
         component: TimingVote
     },
-    {
-        path:"/settime",
-        name:"settime",
-        component: SetTime
-    },
+    // {
+    //     path:"/settime",
+    //     name:"settime",
+    //     component: SetTime
+    // },
 ]

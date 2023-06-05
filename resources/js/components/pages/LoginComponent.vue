@@ -99,7 +99,7 @@ export default {
   methods: {
 	async handleSubmit()
 	{
-		const response = await axios.post('http://voting.surabayawebtech.com/api/auth/login',{
+		const response = await axios.post('https://voting.surabayawebtech.com/api/auth/login',{
 			email: this.email,
 			password: this.password
 		});

@@ -5511,7 +5511,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://voting.surabayawebtech.com/api/auth/login', {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('https://voting.surabayawebtech.com/api/auth/login', {
                 email: _this.email,
                 password: _this.password
               });
@@ -5594,7 +5594,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://voting.surabayawebtech.com/api/auth/register', {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('https://voting.surabayawebtech.com/api/auth/register', {
                 name: _this.name,
                 email: _this.email,
                 password: _this.password
@@ -8085,11 +8085,13 @@ var routes = [{
   path: "/time",
   name: "time",
   component: _components_pages_TimingComponent_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
-}, {
-  path: "/settime",
-  name: "settime",
-  component: _components_pages_SetTimeComponent_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
-}];
+}
+// {
+//     path:"/settime",
+//     name:"settime",
+//     component: SetTime
+// },
+];
 
 /***/ }),
 
