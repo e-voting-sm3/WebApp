@@ -261,7 +261,7 @@ export default {
 	methods: {
 		async fetchData() {
 			try {
-				const responseTime = await axios.get("http://localhost:8000/api/auth/time", {
+				const responseTime = await axios.get("http://voting.surabayawebtech.com/api/auth/time", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}
@@ -273,7 +273,7 @@ export default {
 				console.log(responseTime.data.data)
 				console.log(responseTime.data.data[0].start_time)
 
-				const responseCandidates = await axios.get("http://localhost:8000/api/auth/candidates", {
+				const responseCandidates = await axios.get("http://voting.surabayawebtech.com/api/auth/candidates", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}
@@ -281,7 +281,7 @@ export default {
 				this.candidates = responseCandidates.data.data;
 				this.lengthCandidates = this.candidates.length;
 
-				const responseVoters = await axios.get("http://localhost:8000/api/auth/voters", {
+				const responseVoters = await axios.get("http://voting.surabayawebtech.com/api/auth/voters", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}

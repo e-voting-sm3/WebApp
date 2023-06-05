@@ -3,60 +3,60 @@
     <sidebar-component />
     <header-component />
     <div class="page-wrapper">
-        <h6 class="mb-0 text-uppercase">Vote</h6>
-        <hr />
+      <h6 class="mb-0 text-uppercase">Vote</h6>
+      <hr />
 
-        <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Waktu Mulai</h5>
-                <p class="card-text">
-                  {{ timingVote.start_time }}
-                </p>
-                <h5 class="card-title">Waktu Berakhir</h5>
-                <p class="card-text">
-                  {{ timingVote.end_time }}
-                </p>
-              </div>
+      <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Waktu Mulai</h5>
+              <p class="card-text">
+                {{ timingVote.start_time }}
+              </p>
+              <h5 class="card-title">Waktu Berakhir</h5>
+              <p class="card-text">
+                {{ timingVote.end_time }}
+              </p>
             </div>
-            <div class="col-md-4">
-              <!-- <router-link to="/settime" class="btn btn-outline-warning mt-5">
-                  Set Time
-                </router-link> -->
-              <router-link
-                :to="{ name: 'settime', params: { id: timingVote.id } }"
-                class="btn btn-outline-warning mt-5"
-                >Update</router-link
-              >
-            </div>
+          </div>
+          <div class="col-md-4">
+            <!-- <router-link v-if="set" to="/settime" class="btn btn-outline-primary mt-5">
+              Set Time
+            </router-link> -->
+            <router-link :to="{ name: 'settime', params: { id: timingVote.id } }" class="btn btn-outline-warning mt-5">
+              Update
+            </router-link>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
-  
+
 <script>
 export default {
   data() {
     return {
-      timingVote: [],
-      userId: null,
+      timingVote: {},
     };
   },
   methods: {
     async fetchData() {
       try {
-        const response = await axios.get(
-          "http://voting.surabayawebtech.com/api/auth/time",
-          {
-            headers: {
-              Authorization: "Bearer " + localStorage.getItem("token"),
-            },
-          }
-        );
+        const response = await axios.get("http://voting.surabayawebtech.com/api/auth/time", {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        });
         this.timingVote = response.data.data[0];
-        console.log(this.timingVote);
+        // if (!this.timingVote) {
+        //   this.set = true;
+        //   this.update = false;
+        // } else {
+        //   this.set = false;
+        //   this.update = true;
+        // }
       } catch (error) {
         console.log(error.response.data.message);
       }

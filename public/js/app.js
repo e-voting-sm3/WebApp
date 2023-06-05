@@ -5417,7 +5417,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 0:
               _context.prev = 0;
               _context.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://localhost:8000/api/auth/time", {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://voting.surabayawebtech.com/api/auth/time", {
                 headers: {
                   Authorization: 'Bearer ' + localStorage.getItem('token')
                 }
@@ -5431,7 +5431,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               console.log(responseTime.data.data);
               console.log(responseTime.data.data[0].start_time);
               _context.next = 12;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://localhost:8000/api/auth/candidates", {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://voting.surabayawebtech.com/api/auth/candidates", {
                 headers: {
                   Authorization: 'Bearer ' + localStorage.getItem('token')
                 }
@@ -5441,7 +5441,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               _this.candidates = responseCandidates.data.data;
               _this.lengthCandidates = _this.candidates.length;
               _context.next = 17;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://localhost:8000/api/auth/voters", {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://voting.surabayawebtech.com/api/auth/voters", {
                 headers: {
                   Authorization: 'Bearer ' + localStorage.getItem('token')
                 }
@@ -5511,7 +5511,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/auth/login', {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://voting.surabayawebtech.com/api/auth/login', {
                 email: _this.email,
                 password: _this.password
               });
@@ -6042,8 +6042,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      timingVote: [],
-      userId: null
+      timingVote: {}
     };
   },
   methods: {
@@ -6064,18 +6063,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 3:
               response = _context.sent;
               _this.timingVote = response.data.data[0];
-              console.log(_this.timingVote);
-              _context.next = 11;
+              // if (!this.timingVote) {
+              //   this.set = true;
+              //   this.update = false;
+              // } else {
+              //   this.set = false;
+              //   this.update = true;
+              // }
+              _context.next = 10;
               break;
-            case 8:
-              _context.prev = 8;
+            case 7:
+              _context.prev = 7;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0.response.data.message);
-            case 11:
+            case 10:
             case "end":
               return _context.stop();
           }
-        }, _callee, null, [[0, 8]]);
+        }, _callee, null, [[0, 7]]);
       }))();
     }
   },
@@ -7674,11 +7679,11 @@ var render = function render() {
     staticClass: "card-title"
   }, [_vm._v("Waktu Mulai")]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
-  }, [_vm._v("\n                " + _vm._s(_vm.timingVote.start_time) + "\n              ")]), _vm._v(" "), _c("h5", {
+  }, [_vm._v("\n              " + _vm._s(_vm.timingVote.start_time) + "\n            ")]), _vm._v(" "), _c("h5", {
     staticClass: "card-title"
   }, [_vm._v("Waktu Berakhir")]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
-  }, [_vm._v("\n                " + _vm._s(_vm.timingVote.end_time) + "\n              ")])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n              " + _vm._s(_vm.timingVote.end_time) + "\n            ")])])]), _vm._v(" "), _c("div", {
     staticClass: "col-md-4"
   }, [_c("router-link", {
     staticClass: "btn btn-outline-warning mt-5",
@@ -7690,7 +7695,7 @@ var render = function render() {
         }
       }
     }
-  }, [_vm._v("Update")])], 1)])])])], 1);
+  }, [_vm._v("\n            Update\n          ")])], 1)])])])], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;
