@@ -69,7 +69,7 @@
                                         </p>
                                     </div>
                                     <div
-                                        class="widgets-icons bg-gradient-burning text-white"
+                                        class="widgets-icons bg-gradient-blues text-white"
                                     >
                                         <i class="bx bx-group"></i>
                                     </div>
@@ -113,7 +113,7 @@
                                         </p>
                                     </div>
                                     <div
-                                        class="widgets-icons bg-gradient-blues text-white"
+                                        class="widgets-icons bg-gradient-burning text-white"
                                     >
                                         <i class="bx bx-x"></i>
                                     </div>
