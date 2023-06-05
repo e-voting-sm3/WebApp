@@ -50,13 +50,6 @@ export default {
           },
         });
         this.timingVote = response.data.data[0];
-        // if (!this.timingVote) {
-        //   this.set = true;
-        //   this.update = false;
-        // } else {
-        //   this.set = false;
-        //   this.update = true;
-        // }
       } catch (error) {
         console.log(error.response.data.message);
       }

@@ -6063,13 +6063,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 3:
               response = _context.sent;
               _this.timingVote = response.data.data[0];
-              // if (!this.timingVote) {
-              //   this.set = true;
-              //   this.update = false;
-              // } else {
-              //   this.set = false;
-              //   this.update = true;
-              // }
               _context.next = 10;
               break;
             case 7:
