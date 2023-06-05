@@ -70,3 +70,22 @@
         <!--end navigation-->
     </div>
 </template>
+
+<style>
+.menu-title {
+    color: #0b0b0b;
+}
+.logo-text {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+.logo-icon {
+    margin-right: 10px; /* Jarak kanan antara ikon dan logo */
+}
+/* .sidebar-wrapper {
+    background-color: #e5d1fa;
+}
+.sidebar-header {
+    background-color: #b799ff;
+} */
+</style>
