@@ -3,10 +3,8 @@
     <sidebar-component />
     <header-component />
     <div class="page-wrapper">
-      <h6 class="mb-0 text-uppercase">Vote</h6>
-      <hr />
-
-      <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
+      <div class="page-content">
+        <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
         <div class="row g-0">
           <div class="col-md-8">
             <div class="card-body">
@@ -30,6 +28,7 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,7 +43,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const response = await axios.get("http://voting.surabayawebtech.com/api/auth/time", {
+        const response = await axios.get("http://127.0.0.1:8000/api/auth/time", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

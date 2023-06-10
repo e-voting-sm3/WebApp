@@ -53,7 +53,7 @@ export default {
   async fetchData() {
     try {
       // Fetch voting data
-      const response = await axios.get("http://voting.surabayawebtech.com/api/auth/votes", {
+      const response = await axios.get("http://127.0.0.1:8000/api/auth/votes", {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -61,7 +61,7 @@ export default {
       this.items = response.data.data;
 
       // Fetch timing data
-      const responsetime = await axios.get("http://voting.surabayawebtech.com/api/auth/time", {
+      const responsetime = await axios.get("http://127.0.0.1:8000/api/auth/time", {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }

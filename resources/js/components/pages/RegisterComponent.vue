@@ -13,7 +13,7 @@
                   <div class="text-center">
                     <h3 class="">Sign Up</h3>
                     <p>
-                      Already have an account? <a href="/login">Sign in here</a>
+                      Already have an account? <a href="/">Sign in here</a>
                     </p>
                   </div>
 
@@ -94,7 +94,7 @@ export default {
   methods: {
 	async handleSubmit()
 	{
-		const response = await axios.post('https://voting.surabayawebtech.com/api/auth/register',{
+		const response = await axios.post('http://127.0.0.1:8000/api/auth/register',{
 			name: this.name,
 			email: this.email,
 			password: this.password

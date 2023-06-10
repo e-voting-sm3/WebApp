@@ -94,7 +94,7 @@
     methods: {
       async fetchData() {
         this.itemID = this.$route.params.id;
-        const response = await axios.get(`http://voting.surabayawebtech.com/api/auth/candidates/${this.itemID}`, {
+        const response = await axios.get(`http://127.0.0.1:8000/api/auth/candidates/${this.itemID}`, {
             headers: {
               Authorization: 'Bearer ' + localStorage.getItem('token')
             }
@@ -114,7 +114,7 @@
         console.log(this.$refs.myImage.files[0])
   
         axios
-    .post(`http://voting.surabayawebtech.com/api/auth/candidates/${this.itemID}`, formData, {
+    .post(`http://127.0.0.1:8000/api/auth/candidates/${this.itemID}`, formData, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token')
       }

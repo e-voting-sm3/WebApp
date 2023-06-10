@@ -99,13 +99,13 @@ export default {
   methods: {
 	async handleSubmit()
 	{
-		const response = await axios.post('https://voting.surabayawebtech.com/api/auth/login',{
+		const response = await axios.post('http://127.0.0.1:8000/api/auth/login',{
 			email: this.email,
 			password: this.password
 		});
 
 		localStorage.setItem('token', response.data.access_token);
-		this.$router.push("/candidate");
+		this.$router.push("/dashboard");
 	}
 
     // login() {

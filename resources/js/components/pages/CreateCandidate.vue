@@ -94,7 +94,7 @@
         formData.append("visi_misi", this.form.visi_misi);
         formData.append("photo", this.form.photo);
   
-        axios.post("http://voting.surabayawebtech.com/api/auth/candidates", formData, {
+        axios.post("https://voting.surabayawebtech.com/api/auth/candidates", formData, {
           headers: {
             Authorization: 'Bearer ' + localStorage.getItem('token')
           }

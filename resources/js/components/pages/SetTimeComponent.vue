@@ -7,41 +7,40 @@
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3"></div>
         <!--end breadcrumb-->
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h6 class="mb-0 text-uppercase">Set Time</h6>
-            <hr />
-            <div class="card">
-              <div class="card-body">
-                <div class="mb-3">
-                  <form @submit.prevent="updateTiming" enctype="multipart/form-data">
-                    <div class="mb-3">
-                      <label for="nama" class="form-label">Tanggal mulai</label>
-                      <input
-                        class="form-control form-control-sm"
-                        type="datetime-local"
-                        aria-label=".form-control-sm example"
-                        v-model="timing.start_time"
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="nama" class="form-label">Tanggal berakhir</label>
-                      <input
-                        class="form-control form-control-sm"
-                        type="datetime-local"
-                        aria-label=".form-control-sm example"
-                        v-model="timing.end_time"
-                      />
-                    </div>
 
-                    <button type="submit" class="btn btn-md btn-primary">Save</button>
-                    <router-link to="/time" class="btn btn-md btn-danger">Cancel</router-link>
-                  </form>
+        <h6 class="mb-0 text-uppercase">Set Time</h6>
+        <hr />
+        <div class="card">
+          <div class="card-body">
+            <div class="mb-3">
+              <form @submit.prevent="updateTiming" enctype="multipart/form-data" ref="form">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Tanggal mulai</label>
+                  <input
+                    class="form-control form-control-sm"
+                    type="datetime-local"
+                    aria-label=".form-control-sm example"
+                    v-model="timing.start_time"
+                    required
+                  />
                 </div>
-              </div>
-              <!--end row-->
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Tanggal berakhir</label>
+                  <input
+                    class="form-control form-control-sm"
+                    type="datetime-local"
+                    aria-label=".form-control-sm example"
+                    v-model="timing.end_time"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-md btn-primary">Save</button>
+                <router-link to="/time" class="btn btn-md btn-danger">Cancel</router-link>
+              </form>
             </div>
           </div>
+          <!--end row-->
         </div>
       </div>
     </div>
@@ -50,6 +49,7 @@
 
 <script>
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default {
   data() {
@@ -64,7 +64,7 @@ export default {
   methods: {
     async fetchData() {
       this.itemID = this.$route.params.id;
-      const response = await axios.get(`http://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, {
+      const response = await axios.get(`http://127.0.0.1:8000/api/auth/time/${this.itemID}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -73,47 +73,72 @@ export default {
     },
 
     updateTiming() {
-      const startDate = new Date(this.timing.start_time);
-      const endDate = new Date(this.timing.end_time);
+      if (this.$refs.form.checkValidity()) {
+        const startDate = new Date(this.timing.start_time);
+        const endDate = new Date(this.timing.end_time);
 
-      const startDateTime = startDate.toISOString().split(".")[0].replace("T", " ");
-      const endDateTime = endDate.toISOString().split(".")[0].replace("T", " ");
+        const startDateTime = formatDate(startDate);
+        const endDateTime = formatDate(endDate);
 
-      let formData = new FormData();
-      formData.append("start_time", startDateTime);
-      formData.append("end_time", endDateTime);
+        let formData = new FormData();
+        formData.append("start_time", startDateTime);
+        formData.append("end_time", endDateTime);
 
-      console.log('awal :' + startDateTime);
-      console.log('akhir :' + endDateTime);
-      axios
-        .post(`http://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, formData, {
-          headers: {
-            Authorization: "Bearer " + localStorage.getItem("token"),
-          },
-        })
-        .then((response) => {
-          console.log(response);
-          this.showAlert();
-        })
-        .catch((error) => {
-          console.error(error);
+        axios
+          .post(`http://127.0.0.1:8000/api/auth/time/${this.itemID}`, formData, {
+            headers: {
+              Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+          })
+          .then((response) => {
+            console.log(response);
+            this.showAlert();
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Invalid Input",
+          text: "Please fill in all required fields.",
         });
+      }
     },
 
     showAlert() {
-      // Use sweetalert2
-      this.$swal("Data Berhasil diupdate!!").then(() => {
-        // Redirect to a specific page
+      Swal.fire({
+        icon: "success",
+        title: "Data Berhasil diupdate!",
+        showConfirmButton: false,
+        timer: 1500,
+      }).then(() => {
         this.$router.push("/time");
       });
     },
   },
 
   created() {
-    // Panggil method fetchData saat pertama kali dijalankan
     this.fetchData();
   },
 };
+
+function formatDate(date) {
+  const year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+
+  month = month < 10 ? "0" + month : month;
+  day = day < 10 ? "0" + day : day;
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+}
 </script>
 
 <style>

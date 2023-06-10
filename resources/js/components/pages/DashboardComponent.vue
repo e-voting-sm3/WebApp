@@ -9,6 +9,7 @@
 		<!--start page wrapper -->
 			<div class="page-content">
 				<div class="row row-cols-1 row-cols-lg-3">
+					<!--waktu dimulai-->
 					<div class="col">
 						<div class="card radius-10">
 							<div class="card-body">
@@ -16,37 +17,7 @@
 									<div class="flex-grow-1">
 										<p class="mb-0">Waktu Mulai</p>
 										<h4 class="font-weight-bold">{{startTime}}</h4>
-										<p class="text-success mb-0 font-13">Analytics for last week</p>
-									</div>
-									<div class="widgets-icons bg-gradient-cosmic text-white"><i class='bx bx-refresh'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div class="flex-grow-1">
-										<p class="mb-0">Waktu Berakhir</p>
-										<h4 class="font-weight-bold">{{endTime}}</h4>
-										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
-									</div>
-									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-group'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div class="flex-grow-1">
-										<p class="mb-0">Jumlah Kandidat</p>
-										<h4 class="font-weight-bold">{{lengthCandidates}}</h4>
-										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
+										<p class="text-secondary mb-0 font-13">waktu sedang dimulai</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white"><i class='bx bx-time'></i>
 									</div>
@@ -54,6 +25,42 @@
 							</div>
 						</div>
 					</div>
+					<!--waktu dimulai end-->
+					<!--waktu berakhir-->
+					<div class="col">
+						<div class="card radius-10">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div class="flex-grow-1">
+										<p class="mb-0">Waktu Berakhir</p>
+										<h4 class="font-weight-bold">{{endTime}}</h4>
+										<p class="text-secondary mb-0 font-13">waktu akan berakhir</p>
+									</div>
+									<div class="widgets-icons bg-gradient-cosmic text-white"><i class='bx bx-time'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--waktu berakhir end-->
+					<!--Jumlah kandidat-->
+					<div class="col">
+						<div class="card radius-10">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div class="flex-grow-1">
+										<p class="mb-0">Jumlah Kandidat</p>
+										<h4 class="font-weight-bold">{{lengthCandidates}}</h4>
+										<p class="text-secondary mb-0 font-13">Kandidat</p>
+									</div>
+									<div class="widgets-icons bg-gradient-blues text-white"><i class='bx bx-group'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Jumlah kandidat end-->
+					<!--user yg sudah memilih-->
 					<div class="col">
 						<div class="card radius-10">
 							<div class="card-body">
@@ -61,47 +68,35 @@
 									<div class="flex-grow-1">
 										<p class="mb-0">Sudah memilih</p>
 										<h4 class="font-weight-bold">{{lengthVoterTrue}}</h4>
-										<p class="text-secondary mb-0 font-13">Analytics for last month</p>
+										<p class="text-secondary mb-0 font-13">Already vote</p>
 									</div>
-									<div class="widgets-icons bg-gradient-kyoto text-white"><i class='bx bxs-cube'></i>
+									<div class="widgets-icons bg-gradient-kyoto text-white"><i class='bx bxs-check'></i>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<!--user yg sudah memilih end-->
+					<!--user yg belum memilih-->
 					<div class="col">
 						<div class="card radius-10">
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
 										<p class="mb-0">Belum Memilih</p>
-										<h4 class="font-weight-bold">{{lengthVoterFalse}}<small class="text-danger font-13">(-16%)</small></h4>
-										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
+										<h4 class="font-weight-bold">{{lengthVoterFalse}}</h4>
+										<p class="text-secondary mb-0 font-13">haven't voted yet</p>
 									</div>
-									<div class="widgets-icons bg-gradient-blues text-white"><i class='bx bx-line-chart'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div class="flex-grow-1">
-										<p class="mb-0">New Sessions</p>
-										<h4 class="font-weight-bold">96% <small class="text-danger font-13">(+54%)</small></h4>
-										<p class="text-secondary mb-0 font-13">Analytics for last week</p>
-									</div>
-									<div class="widgets-icons bg-gradient-moonlit text-white"><i class='bx bx-bar-chart'></i>
+									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-x'></i>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+					<!--user yg belum memilih end-->
 				<!--end row-->
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-12 col-lg-6">
 						<div class="card radius-10">
 							<div class="card-body">
@@ -117,94 +112,6 @@
 						</div>
 					</div>
 				</div>
-				<!--end row-->
-				<div class="row">
-					<div class="col-12 col-lg-8 d-lg-flex align-items-lg-stretch">
-						<div class="card radius-10 w-100">
-							<div class="card-header border-bottom-0 bg-transparent">
-								<div class="d-lg-flex align-items-center">
-									<div class="">
-										<h5 class="mb-1">Website Audience Overview</h5>
-										<p class="text-secondary mb-2 mb-lg-0 font-14">There are plenty of free web proxy sites that you can use</p>
-									</div>
-									<div class="ms-lg-auto">
-										<div class="btn-group-round">
-											<div class="btn-group">
-												<button type="button" class="btn btn-white">Day</button>
-												<button type="button" class="btn btn-white">Week</button>
-												<button type="button" class="btn btn-white">Month</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-body">
-								<div id="chart3"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-4 d-lg-flex align-items-lg-stretch">
-						<div class="card radius-10 w-100">
-							<div class="card-header bg-transparent">Traffic Sources</div>
-							<div class="card-body">
-								<div class="table-responsive">
-									<table class="table table-striped mb-0">
-										<thead>
-											<tr>
-												<th>Source</th>
-												<th>Visitors</th>
-												<th>Bounce Rate</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>(direct)</td>
-												<td>56</td>
-												<td>10%</td>
-											</tr>
-											<tr>
-												<td>google</td>
-												<td>29</td>
-												<td>12%</td>
-											</tr>
-											<tr>
-												<td>linkedin.com</td>
-												<td>68</td>
-												<td>33%</td>
-											</tr>
-											<tr>
-												<td>bing</td>
-												<td>14</td>
-												<td>24%</td>
-											</tr>
-											<tr>
-												<td>facebook.com</td>
-												<td>87</td>
-												<td>22%</td>
-											</tr>
-											<tr>
-												<td>other</td>
-												<td>98</td>
-												<td>27%</td>
-											</tr>
-											<tr>
-												<td>linkedin.com</td>
-												<td>68</td>
-												<td>33%</td>
-											</tr>
-											<tr>
-												<td>bing</td>
-												<td>14</td>
-												<td>24%</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--end row-->
                 
 				<div class="row row-cols-1 row-cols-lg-3">
 					<div class="col">
@@ -228,18 +135,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
-
+				</div> -->
 			</div>
 		</div>
-				<!--end page wrapper -->
-	<!--end wrapper-->
-    <!--start switcher-->
-                  <!--end row-->
-    </div>
-    
-          
-
+	</div>        
 </template>
 
 <script>
@@ -261,7 +160,7 @@ export default {
 	methods: {
 		async fetchData() {
 			try {
-				const responseTime = await axios.get("http://voting.surabayawebtech.com/api/auth/time", {
+				const responseTime = await axios.get("http://127.0.0.1:8000/api/auth/time", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}
@@ -273,7 +172,7 @@ export default {
 				console.log(responseTime.data.data)
 				console.log(responseTime.data.data[0].start_time)
 
-				const responseCandidates = await axios.get("http://voting.surabayawebtech.com/api/auth/candidates", {
+				const responseCandidates = await axios.get("http://127.0.0.1:8000/api/auth/candidates", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}
@@ -281,7 +180,7 @@ export default {
 				this.candidates = responseCandidates.data.data;
 				this.lengthCandidates = this.candidates.length;
 
-				const responseVoters = await axios.get("http://voting.surabayawebtech.com/api/auth/voters", {
+				const responseVoters = await axios.get("http://127.0.0.1:8000/api/auth/voters", {
 					headers: {
 						Authorization: 'Bearer ' + localStorage.getItem('token')
 					}

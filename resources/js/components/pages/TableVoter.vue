@@ -8,10 +8,12 @@
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3"></div>
         <!--end breadcrumb-->
-          <div class="card">
-            <div class="card-header">
-                <div class="row">
-                  <table class="table table-striped table-hover">
+          <div class="card radius-10">
+            <div class="card-header bg-transparent">
+              <h6 class="mb-0 font-weight-bold">Users</h6>
+              </div>
+                <div class="table-responsive p-3">
+                  <table class="table mb-0">
                     <thead>
                       <tr>
                         <th scope="col">No.</th>
@@ -30,9 +32,9 @@
                               <!-- <a  data-bs-toggle="modal"  class="btn btn-sm btn-warning">EDIT</a> -->
                               <button
                                 @click="deleteItem(item.id)"
-                                class="btn btn-outline-danger"
+                                class="btn btn-outline-danger btn-sm"
                               >
-                                DELETE
+                                Delete
                               </button>
                             </td> 
                           </tr> 
@@ -43,7 +45,6 @@
           </div>
       </div>
     </div>
-  </div>
   </template>
 
 <script>
@@ -59,7 +60,7 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("http://voting.surabayawebtech.com/api/auth/voters",{
+      const response = await axios.get("http://127.0.0.1:8000/api/auth/voters",{
         headers:{
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -80,7 +81,7 @@ export default {
   if (result.isConfirmed) {
     try {
       // Jika user mengklik tombol "Hapus", lakukan proses delete
-      await axios.delete(`http://voting.surabayawebtech.com/api/auth/voters/${id}`, {
+      await axios.delete(`http://127.0.0.1:8000/api/auth/voters/${id}`, {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
