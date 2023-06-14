@@ -29,7 +29,8 @@ class CandidateService
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'visi_misi' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -39,7 +40,8 @@ class CandidateService
 
             $candidateData = [
                 'name' => $request->name,
-                'visi_misi' => $request->visi_misi,
+                'visi' => $request->visi,
+                'misi' => $request->misi,
                 'photo' => $photo->hashName(),
             ];
 
@@ -53,25 +55,14 @@ class CandidateService
 
     public function updateCandidate(Request $request, $id)
     {
-        // $validatedData = $request->validate([
-        //     'name' => 'required',
-        //     'visi_misi' => 'required',
-        //     'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        // ]);
-
-        // alternatif
-        // $candidateData = [
-        //     'name' => $request->name,
-        //     'visi_misi' => $request->input('visi_misi'),
-        // ];
-
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $photo->storeAs('public/image', $photo->hashName());
 
             $candidateData = [
                 'name' => $request->name,
-                'visi_misi' => $request->input('visi_misi'),
+                'visi' => $request->visi,
+                'misi' => $request->misi,
                 'photo' => $photo->hashName()
             ];
             

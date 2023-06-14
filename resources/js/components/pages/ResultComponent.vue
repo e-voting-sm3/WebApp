@@ -92,8 +92,20 @@ export default {
   },
 },
 
-  created() {
-    // Panggil method fetchData saat pertama kali dijalankan
+created() {
+    const token = localStorage.getItem("token");
+    const expires_in = localStorage.getItem("expires_in");
+
+    // console.log(new Date());
+    // console.log(new Date(expires_in));
+
+    if (!token || !expires_in || new Date() > new Date(expires_in)) {
+      // Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
+      localStorage.removeItem("token");
+      localStorage.removeItem("expires_in");
+      this.$router.push("/");
+      return;
+    }
     this.fetchData();
   },
 };

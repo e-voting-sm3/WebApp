@@ -16,7 +16,8 @@ class Candidates extends Migration
         Schema::create('candidates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('visi_misi');
+            $table->text('visi');
+            $table->text('misi');
             $table->string('photo')->nullable();
             $table->timestamps();
         });

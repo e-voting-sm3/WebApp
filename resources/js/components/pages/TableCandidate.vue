@@ -17,7 +17,8 @@
                       <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Nama Kandidate</th>
-                        <th scope="col">Visi & Misi</th>
+                        <th scope="col">Visi</th>
+                        <th scope="col">Misi</th>
                         <th scope="col">Gambar</th>
                         <th scope="col">Aksi</th>
                       </tr>
@@ -26,7 +27,8 @@
                           <tr v-for="(item, index) in items" :key="item.message">
                             <th scope="row">{{ index + 1 }}</th>
                             <td>{{ item.name}}</td>
-                            <td>{{ item.visi_misi}}</td>
+                            <td>{{ item.visi}}</td>
+                            <td>{{ item.misi}}</td>
                             <td>
                               <img
                                 :src="'/storage/image/' + item.photo"
@@ -112,8 +114,21 @@ export default {
 },
 
   },
+
   created() {
-    // Panggil method fetchData saat pertama kali dijalankan
+    const token = localStorage.getItem("token");
+    const expires_in = localStorage.getItem("expires_in");
+
+    // console.log(new Date());
+    // console.log(new Date(expires_in));
+
+    if (!token || !expires_in || new Date() > new Date(expires_in)) {
+      // Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
+      localStorage.removeItem("token");
+      localStorage.removeItem("expires_in");
+      this.$router.push("/");
+      return;
+    }
     this.fetchData();
   },
 };

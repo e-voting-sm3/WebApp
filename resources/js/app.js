@@ -24,7 +24,6 @@ Vue.component('vote-page', require('./components/pages/VoteComponent.vue').defau
 Vue.component('result-page', require('./components/pages/ResultComponent.vue').default);
 
 Vue.component('login-page', require('./components/pages/LoginComponent.vue').default);
-Vue.component('register-page', require('./components/pages/RegisterComponent.vue').default);
 Vue.component('tablecandidate-page', require('./components/pages/TableCandidate.vue').default);
 Vue.component('tablevoter-page', require('./components/pages/TableVoter.vue').default);
 

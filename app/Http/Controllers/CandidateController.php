@@ -33,7 +33,8 @@ class CandidateController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'visi_misi' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -57,7 +58,8 @@ class CandidateController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'visi_misi' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
             'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 

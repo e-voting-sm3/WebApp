@@ -93,49 +93,23 @@
 							</div>
 						</div>
 					</div>
-				</div>
-					<!--user yg belum memilih end-->
-				<!--end row-->
-				<!-- <div class="row">
-					<div class="col-12 col-lg-6">
+					<!-- total user -->
+					<div class="col">
 						<div class="card radius-10">
 							<div class="card-body">
-								<div id="chart1"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-6">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chart2"></div>
+								<div class="d-flex align-items-center">
+									<div class="flex-grow-1">
+										<p class="mb-0">Jumlah Voter</p>
+										<h4 class="font-weight-bold">{{lengthVoters}}</h4>
+										<p class="text-secondary mb-0 font-13">all voters</p>
+									</div>
+									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-group'></i>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-                
-				<div class="row row-cols-1 row-cols-lg-3">
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chart4"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chart5"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div id="chart6"></div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>        
@@ -153,6 +127,7 @@ export default {
 			startTime: null,
 			endTime: null,
 			lengthCandidates: 0,
+			lengthVoters:0,
 			lengthVoterTrue: 0,
 			lengthVoterFalse: 0,
 		}
@@ -186,6 +161,7 @@ export default {
 					}
 				});
 				this.voters = responseVoters.data.data;
+				this.lengthVoters = this.voters.length;
 				this.lengthVoterTrue = this.voters.filter(voter => voter.status === 'true').length;
 				this.lengthVoterFalse = this.voters.filter(voter => voter.status === 'false').length;
 			} catch (error) {
@@ -194,7 +170,19 @@ export default {
 		}
 	},
 	created() {
-		// Panggil method fetchData saat pertama kali dijalankan
+		const token = localStorage.getItem("token");
+		const expires_in = localStorage.getItem("expires_in");
+
+		// console.log(new Date());
+		// console.log(new Date(expires_in));
+
+		if (!token || !expires_in || new Date() > new Date(expires_in)) {
+		// Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
+		localStorage.removeItem("token");
+		localStorage.removeItem("expires_in");
+		this.$router.push("/");
+		return;
+		}
 		this.fetchData();
 	},
 }

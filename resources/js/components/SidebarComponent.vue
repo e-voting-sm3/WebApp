@@ -13,54 +13,56 @@
      <!--navigation-->
      <ul class="metismenu" id="menu">
          <li>
-             <a href="/dashboard">
+            <router-link to="/dashboard">
                  <div class="parent-icon">
-                 <i class="bi bi-speedometer2"></i>
-             </div>
+                     <i class="bi bi-speedometer2"></i>
+                 </div>
                  <div class="menu-title">Dashboard</div>
-             </a>
+            </router-link>
+             <!-- <router-link to="/dashboard">
+             </router-link> -->
          </li>
          <li>
-             <a href="/createcandidate">
+             <router-link to="/createcandidate">
                  <div class="parent-icon">
                  <i class="bi bi-person-add"></i>
              </div>
                  <div class="menu-title">Create Candidate</div>
-             </a>
+             </router-link>
          </li>
          <li>
-             <a href="/candidate">
+             <router-link to="/candidate">
                  <div class="parent-icon">
                  <i class="bi bi-people"></i>
              </div>
                  <div class="menu-title">Data Candidates</div>
-             </a>
+             </router-link>
          </li>
          <li>
-             <a href="/time">
+             <router-link to="/time">
                  <div class="parent-icon">
                  <i class="bi bi-clock"></i>
              </div>
                  <div class="menu-title">Time Vote</div>
-             </a>
+             </router-link>
          </li>
          <li>
-             <a href="/result">
+             <router-link to="/result">
                  <div class="parent-icon">
                  <i class="bi bi-bar-chart"></i>
              </div>
                  <div class="menu-title">Result</div>
-             </a>
+             </router-link>
          </li>
 
          
          <li>
-             <a href="/voter">
+             <router-link to="/voter">
                  <div class="parent-icon">
                  <i class="bi bi-person-check"></i>
              </div>
                  <div class="menu-title">Data Voter</div>
-             </a>
+             </router-link>
          </li>
      </ul>
      <!--end navigation-->

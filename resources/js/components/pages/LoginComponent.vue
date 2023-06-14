@@ -10,10 +10,6 @@
 				  <div class="p-4 rounded">
 					<div class="text-center">
 					  <h3 class="">Sign in</h3>
-					  <p>
-						Don't have an account yet?
-						<a href="/register">Sign up here</a>
-					  </p>
 					</div>
 					<div class="login-separater text-center mb-4">
 					  <span>SIGN IN WITH EMAIL</span>
@@ -89,61 +85,44 @@
 
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2';
+
 export default {
-  data: () => {
+  data() {
     return {
       email: "",
       password: "",
     };
   },
   methods: {
-	async handleSubmit()
-	{
-		const response = await axios.post('http://127.0.0.1:8000/api/auth/login',{
-			email: this.email,
-			password: this.password
-		});
+    async handleSubmit() {
+      try {
+        const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+          email: this.email,
+          password: this.password
+        });
 
-		localStorage.setItem('token', response.data.access_token);
-		this.$router.push("/dashboard");
-	}
-
-    // login() {
-    //   fetch("http://localhost:8000/api/auth/login", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       email: this.email,
-    //       password: this.password,
-    //     }),
-    //   })
-    //     .then((response) => {
-    //       if (response.ok) {
-    //         return response.json();
-    //       } else {
-    //         throw new Error("Login failed.");
-    //       }
-    //     })
-    //     .then((data) => {
-    //       // save token to localStorage
-    //       localStorage.setItem("token", data.token);
-
-    //       // redirect to candidate or other page
-    //       this.$router.push("/candidate");
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //       // handle login error
-    //     });
-    // },
+        if (response.data.level === 'admin') {
+          localStorage.setItem('token', response.data.access_token);
+          localStorage.setItem('expires_in', response.data.expires_in);
+          this.$router.push("/dashboard");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Login Gagal",
+			text: 'email atau password yang anda masukkan salah!'
+          }).then(() => {
+            this.$router.push('/');
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
-</script>
-<style lang="scss" scoped>
 
-</style>
+</script>
 
 
 

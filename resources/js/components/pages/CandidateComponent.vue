@@ -17,8 +17,12 @@
                   <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" v-model="form.name" />
                 </div>
                 <div class="mb-3">
-                  <label for="visi_misi" class="form-label">Visi dan Misi</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="form.visi_misi"></textarea>
+                  <label for="visi" class="form-label">Visi</label>
+                  <textarea class="form-control" id="visi" rows="3" v-model="form.visi"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="misi" class="form-label">Misi</label>
+                  <textarea class="form-control" id="misi" rows="3" v-model="form.misi"></textarea>
                 </div>
                 <button type="submit" class="btn btn-md btn-primary">Save</button>
                 <button type="reset" class="btn btn-md btn-warning">Reset</button>
@@ -41,7 +45,8 @@ export default {
     return {
       form: {
         name: "",
-        visi_misi: "",
+        visi: "",
+        misi: "",
         photo: null,
       },
     };
@@ -50,7 +55,8 @@ export default {
     handleSubmit() {
       let formData = new FormData();
       formData.append("name", this.form.name);
-      formData.append("visi_misi", this.form.visi_misi);
+      formData.append("visi", this.form.visi);
+      formData.append("misi", this.form.misi);
       formData.append("photo", this.form.photo);
 
       axios
@@ -63,7 +69,8 @@ export default {
           console.log(response);
 
           this.form.name = "";
-          this.form.visi_misi = "";
+          this.form.visi = "";
+          this.form.misi = "";
           this.form.photo = null;
           this.$refs.myImage.value = null;
 
@@ -90,6 +97,21 @@ export default {
     previewFiles() {
       this.form.photo = this.$refs.myImage.files[0];
     },
+  },
+  created() {
+    const token = localStorage.getItem("token");
+    const expires_in = localStorage.getItem("expires_in");
+
+    // console.log(new Date());
+    // console.log(new Date(expires_in));
+
+    if (!token || !expires_in || new Date() > new Date(expires_in)) {
+      // Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
+      localStorage.removeItem("token");
+      localStorage.removeItem("expires_in");
+      this.$router.push("/");
+      return;
+    }
   },
 };
 </script>
