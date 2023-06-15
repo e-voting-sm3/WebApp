@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <sidebar-component />
-    <header-component />
-    <div class="page-wrapper">
+	<div>
+		<!--navigation-->
+      <sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
+		<div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3"></div>
@@ -44,7 +51,8 @@
         </div>
       </div>
     </div>
-  </div>
+		<!--end page wrapper -->
+	</div>
 </template>
 
 <script>

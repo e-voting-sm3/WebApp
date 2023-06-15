@@ -1,8 +1,17 @@
 <template>
-    <div>
+  	<div>
+		<!--navigation-->
       <sidebar-component />
-        <header-component />
-      <h2 class="text-center mt-3 mb-5">Update Data Candidate</h2>
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
+      <!-- <div class="page-wrapper"> -->
+        <!-- <div class="page-content"> -->
+          <h2 class="text-center mt-3 mb-5">Update Data Candidate</h2>
       <form @submit.prevent="updateCandidate">
         <div class="row">
           <div class="col-sm-4"></div>
@@ -80,10 +89,11 @@
           </div>
         </div>
       </form>
-      <footer-admin-component/>
-        <change-color-component/>
-    </div>
-  </template>
+        <!-- </div> -->
+      <!-- </div> -->
+		<!--end page wrapper -->
+	</div>
+</template>
   
   <script>
   export default {

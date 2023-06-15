@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <sidebar-component/>
-	<header-component/>
-    <div class="page-wrapper">
+	<div>
+		<!--navigation-->
+        	<sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
+		    <div class="page-wrapper">
       <div class="page-content">
         <div class="card">
           <div class="card-body">
@@ -32,7 +39,8 @@
         </div>
       </div>
     </div>
-  </div>
+		<!--end page wrapper -->
+	</div>
 </template>
 
 <script>

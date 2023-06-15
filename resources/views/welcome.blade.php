@@ -29,20 +29,28 @@
         <link rel="stylesheet" href="assets/css/semi-dark.css" />
         <link rel="stylesheet" href="assets/css/header-colors.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <title>e-voting</title>
+        <title>EtoV | Electronic Voting</title>
     </head>
 
 <body class="antialiased">
-    <!--wrapper-->
 
+    	<!--wrapper-->
+	<div class="wrapper" id="app">
+        <router-view><router-view />
+		
+        
+        <!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+    
 
-
-
-
-
-        <div id="app">
-            <router-view><router-view />
-        </div>
 
 
 

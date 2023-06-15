@@ -1,7 +1,14 @@
 <template>
-    <div>
+  	<div>
+		<!--navigation-->
       <sidebar-component />
-        <header-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
       <h2 class="text-center mt-3 mb-5">Update Data Candidate</h2>
       <form @submit.prevent="updateCandidate">
         <div class="row">
@@ -77,9 +84,8 @@
           </div>
         </div>
       </form>
-      <footer-admin-component/>
-        <change-color-component/>
-    </div>
+		<!--end page wrapper -->
+	</div>
   </template>
   
   <script>

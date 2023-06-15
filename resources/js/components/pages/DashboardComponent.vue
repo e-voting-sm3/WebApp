@@ -1,14 +1,18 @@
 <template>
-    <div>
-        <sidebar-component/>
-		<header-component/>
-
-    
-    <div class="page-wrapper">
-	<!--wrapper-->
+	<div>
+		<!--navigation-->
+        	<sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
 		<!--start page wrapper -->
-			<div class="page-content">
-				<div class="row row-cols-1 row-cols-lg-3">
+		    <div class="page-wrapper">
+                <div class="page-content">
+                    <!--breadcrumb-->
+						<div class="row row-cols-1 row-cols-lg-3">
 					<!--waktu dimulai-->
 					<div class="col">
 						<div class="card radius-10">
@@ -110,9 +114,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>        
+                    <!--end row-->
+                </div>
+            </div>
+		<!--end page wrapper -->
+	</div>
 </template>
 
 <script>

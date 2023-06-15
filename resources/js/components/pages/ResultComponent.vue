@@ -1,7 +1,14 @@
 <template>
 	<div>
-		<sidebar-component/>
-		<header-component/>
+		<!--navigation-->
+        	<sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
 		<div class="page-wrapper">
 		  <div class="page-content ms-auto">
 						<div class="card radius-10 w-100">
@@ -35,7 +42,10 @@
 		  </div>
 		  
 		</div>
+		<!--end page wrapper -->
 	</div>
+
+
   </template>
 
 <script>

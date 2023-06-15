@@ -1,7 +1,14 @@
 <template>
-  <div>
-    <sidebar-component/>
-		<header-component/>
+	<div>
+		<!--navigation-->
+      <sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
     <div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
@@ -60,8 +67,9 @@
         </div>
           
       </div>
-    </div>
-  </template>
+		<!--end page wrapper -->
+	</div>
+</template>
 
 <script>
 import Swal from 'sweetalert2';

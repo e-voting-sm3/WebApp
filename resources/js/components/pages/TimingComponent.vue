@@ -1,7 +1,14 @@
 <template>
-  <div>
-    <sidebar-component />
-    <header-component />
+	<div>
+		<!--navigation-->
+      <sidebar-component />
+		<!--end navigation-->
+        
+		<!--start header -->
+			<header-component/>	
+		<!--end header -->
+		
+		<!--start page wrapper -->
     <div class="page-wrapper">
       <div class="page-content">
         <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
@@ -30,7 +37,8 @@
       </div>
       </div>
     </div>
-  </div>
+		<!--end page wrapper -->
+	</div>
 </template>
 
 <script>
