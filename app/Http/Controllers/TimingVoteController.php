@@ -18,22 +18,22 @@ class TimingVoteController extends Controller
         ]);
     }
 
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'start_time' => 'required',
-    //         'end_time' => 'required',
-    //     ]);
+    public function store(Request $request)
+    {
+        $request->validate([
+            'start_time' => 'required',
+            'end_time' => 'required',
+        ]);
 
-    //     $timingVotes = TimingVote::create([
-    //         'start_time' => $request->input('start_time'),
-    //         'end_time' => $request->input('end_time'),
-    //     ]);
+        $timingVotes = TimingVote::create([
+            'start_time' => $request->input('start_time'),
+            'end_time' => $request->input('end_time'),
+        ]);
 
-    //     return response()->json([
-    //         'data' => $timingVotes
-    //     ]);
-    // }
+        return response()->json([
+            'data' => $timingVotes
+        ]);
+    }
 
     public function show($id)
     {

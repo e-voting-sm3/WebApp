@@ -23,14 +23,17 @@
           <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <div class="mb-3">
-              <label for="visi_misi" class="form-label">visi_misi</label>
-              <input
-                type="text"
-                class="form-control"
-                id="visi_misi"
-                placeholder="input visi_misi"
-                v-model="candidate.visi_misi"
-              />
+              <label for="visi" class="form-label">Visi</label>
+              <textarea class="form-control" id="visi" rows="3" v-model="candidate.visi" placeholder="masukkan visi"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-6">
+            <div class="mb-3">
+              <label for="misi" class="form-label">Misi</label>
+              <textarea class="form-control" id="visi" rows="3" v-model="candidate.misi" placeholder="masukkan misi"></textarea>
             </div>
           </div>
         </div>
@@ -94,7 +97,7 @@
     methods: {
       async fetchData() {
         this.itemID = this.$route.params.id;
-        const response = await axios.get(`http://voting.surabayawebtech.com/api/auth/candidates/${this.itemID}`, {
+        const response = await axios.get(`http://127.0.0.1:8000/api/auth/candidates/${this.itemID}`, {
             headers: {
               Authorization: 'Bearer ' + localStorage.getItem('token')
             }
@@ -114,7 +117,7 @@
         console.log(this.$refs.myImage.files[0])
   
         axios
-    .post(`http://voting.surabayawebtech.com/api/auth/candidates/${this.itemID}`, formData, {
+    .post(`http://127.0.0.1:8000/api/auth/candidates/${this.itemID}`, formData, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token')
       }
@@ -145,12 +148,22 @@
         });
       }
     },
-  
     created() {
-      // Panggil method fetchData saat pertama kali dijalankan
+    const token = localStorage.getItem("token");
+    const expires_in = localStorage.getItem("expires_in");
+
+    // console.log(new Date());
+    // console.log(new Date(expires_in));
+
+    if (!token || !expires_in || new Date() > new Date(expires_in)) {
+      // Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
+      localStorage.removeItem("token");
+      localStorage.removeItem("expires_in");
+      this.$router.push("/");
+      return;
+    }
       this.fetchData();
-      // console.log(Vue.version)
-    },
+  },
     mounted() {
       // Panggil method fetchData setiap kali nilai itemID berubah
       this.$watch("itemID", this.fetchData);

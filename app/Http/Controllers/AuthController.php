@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use DateTimeZone;
+use DateTime;
 
 class AuthController extends Controller
 {
@@ -48,15 +50,16 @@ class AuthController extends Controller
     {
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth()->attempt($credentials)) {
+        if (!$token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        // Debug statement
-        // echo "Token: $token";
+        $user = auth()->user();
+        $level = $user->level; // Ambil nilai level dari objek user
 
-        return $this->respondWithToken($token);
+        return $this->respondWithToken($token, $level);
     }
+
 
     /**
      * Get the authenticated User.
@@ -97,12 +100,21 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function respondWithToken($token)
+    protected function respondWithToken($token, $level)
     {
+        $expirationTime = auth()->factory()->getTTL() * 60;
+        $expiresInTimestamp = time() + $expirationTime;
+    
+        $dateTimeZone = new DateTimeZone('Asia/Jakarta');
+        $dateTime = new DateTime('@' . $expiresInTimestamp);
+        $dateTime->setTimezone($dateTimeZone);
+        $expiresIn = $dateTime->format('Y-m-d H:i:s');
+    
         return response()->json([
             'access_token' => $token,
+            'level' => $level,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => $expiresIn
         ]);
     }
 }

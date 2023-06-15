@@ -11,7 +11,8 @@ class Candidate extends Model
 
     protected $fillable =[
         'name',
-        'visi_misi',
+        'visi',
+        'misi',
         'photo'
     ];
 }

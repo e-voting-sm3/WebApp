@@ -1,91 +1,84 @@
 <template>
     <div class="sidebar-wrapper" data-simplebar="true">
-        <div class="sidebar-header">
-            <div>
-                <img
-                    src="assets/images/logo-img.jpeg"
-                    class="logo-icon"
-                    alt="logo icon"
-                />
-            </div>
-            <div>
-                <h4 class="logo-text">EtoV</h4>
-            </div>
-            <div class="toggle-icon ms-auto">
-                <i class="bx bx-first-page"></i>
-            </div>
-        </div>
-        <!--navigation-->
-        <ul class="metismenu" id="menu">
-            <li>
-                <a href="/dashboard">
-                    <div class="parent-icon">
-                        <i class="bi bi-speedometer2"></i>
-                    </div>
-                    <div class="menu-title">Dashboard</div>
-                </a>
-            </li>
-            <li>
-                <a href="/createcandidate">
-                    <div class="parent-icon">
-                        <i class="bi bi-person-add"></i>
-                    </div>
-                    <div class="menu-title">Create Candidate</div>
-                </a>
-            </li>
-            <li>
-                <a href="/candidate">
-                    <div class="parent-icon">
-                        <i class="bi bi-people"></i>
-                    </div>
-                    <div class="menu-title">Data Candidates</div>
-                </a>
-            </li>
-            <li>
-                <a href="/time">
-                    <div class="parent-icon">
-                        <i class="bi bi-clock"></i>
-                    </div>
-                    <div class="menu-title">Time Vote</div>
-                </a>
-            </li>
-            <li>
-                <a href="/result">
-                    <div class="parent-icon">
-                        <i class="bi bi-bar-chart"></i>
-                    </div>
-                    <div class="menu-title">Result</div>
-                </a>
-            </li>
+     <div class="sidebar-header">
+         <div>
+             <img src="assets/images/logo-img.jpeg" class="logo-icon" alt="logo icon">
+         </div>
+         <div>
+             <h4 class="logo-text">EtoV</h4>
+         </div>
+         <div class="toggle-icon ms-auto"><i class='bx bx-first-page'></i>
+         </div>
+     </div>
+     <!--navigation-->
+     <ul class="metismenu" id="menu">
+         <li>
+            <router-link to="/dashboard">
+                 <div class="parent-icon">
+                     <i class="bi bi-speedometer2"></i>
+                 </div>
+                 <div class="menu-title">Dashboard</div>
+            </router-link>
+             <!-- <router-link to="/dashboard">
+             </router-link> -->
+         </li>
+         <li>
+             <router-link to="/createcandidate">
+                 <div class="parent-icon">
+                 <i class="bi bi-person-add"></i>
+             </div>
+                 <div class="menu-title">Create Candidate</div>
+             </router-link>
+         </li>
+         <li>
+             <router-link to="/candidate">
+                 <div class="parent-icon">
+                 <i class="bi bi-people"></i>
+             </div>
+                 <div class="menu-title">Data Candidates</div>
+             </router-link>
+         </li>
+         <li>
+             <router-link to="/time">
+                 <div class="parent-icon">
+                 <i class="bi bi-clock"></i>
+             </div>
+                 <div class="menu-title">Time Vote</div>
+             </router-link>
+         </li>
+         <li>
+             <router-link to="/result">
+                 <div class="parent-icon">
+                 <i class="bi bi-bar-chart"></i>
+             </div>
+                 <div class="menu-title">Result</div>
+             </router-link>
+         </li>
 
-            <li>
-                <a href="/voter">
-                    <div class="parent-icon">
-                        <i class="bi bi-person-check"></i>
-                    </div>
-                    <div class="menu-title">Data Voter</div>
-                </a>
-            </li>
-        </ul>
-        <!--end navigation-->
-    </div>
+         
+         <li>
+             <router-link to="/voter">
+                 <div class="parent-icon">
+                 <i class="bi bi-person-check"></i>
+             </div>
+                 <div class="menu-title">Data Voter</div>
+             </router-link>
+         </li>
+     </ul>
+     <!--end navigation-->
+ </div>
 </template>
 
 <style>
 .menu-title {
-    color: #0b0b0b;
+color: #000000;
 }
 .logo-text {
-    font-family: "Arial", sans-serif;
-    font-weight: bold;
+font-family: "Arial", sans-serif;
+font-weight: bold;
 }
 .logo-icon {
-    margin-right: 10px; /* Jarak kanan antara ikon dan logo */
+margin-right: 10px; 
 }
-/* .sidebar-wrapper {
-    background-color: #e5d1fa;
-}
-.sidebar-header {
-    background-color: #b799ff;
-} */
+
 </style>

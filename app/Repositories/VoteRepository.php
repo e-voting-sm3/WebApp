@@ -52,11 +52,16 @@ class VoteRepository
           return 'Candidate not found';
       }
       
+
       // vote
       $vote = $this->votes->create([
           'voter_id' => $voterId,
           'candidate_id' => $candidateId,
       ]);
+
+      $statusUser = User::find($voterId);
+      $statusUser->status = 'true';
+      $statusUser->save();
       
       return 'Vote submitted successfully';
   }

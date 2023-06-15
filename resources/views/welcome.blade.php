@@ -13,7 +13,6 @@
         <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
         <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
         <link href="assets/plugins/highcharts/css/highcharts.css" rel="stylesheet" />
-        <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
         <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
         <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
         <!-- loader-->
@@ -180,6 +179,7 @@
     <!--app JS-->
     <script src="assets/js/app.js"></script>
     <script src="assets/plugins/input-tags/js/tagsinput.js"></script>
+
     <!-- highcharts js -->
 	<script src="assets/plugins/highcharts/js/highcharts.js"></script>
 	<script src="assets/plugins/highcharts/js/highcharts-more.js"></script>

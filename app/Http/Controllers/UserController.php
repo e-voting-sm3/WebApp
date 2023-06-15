@@ -21,6 +21,25 @@ class UserController extends Controller
         ]);
     }
 
+    public function getVoterStatusTrue()
+    {
+        $voterTrue = User::where('status', 'true')->get();
+
+        return response()->json([
+            'data' => $voterTrue
+        ]);
+    }
+
+    public function getVoterStatusFalse()
+    {
+        $voterFalse = User::where('status', 'false')->get();
+
+    
+        return response()->json([
+            'data' => $voterFalse
+        ]);
+    }
+
     public function update(Request $request, $id)
     {
         $validateData = [
