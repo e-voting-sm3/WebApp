@@ -43,7 +43,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/api/auth/time", {
+        const response = await axios.get("https://voting.surabayawebtech.com/api/auth/time", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

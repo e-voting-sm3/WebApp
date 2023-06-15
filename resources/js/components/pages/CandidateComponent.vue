@@ -60,7 +60,7 @@ export default {
       formData.append("photo", this.form.photo);
 
       axios
-        .post("http://127.0.0.1:8000/api/auth/candidates", formData, {
+        .post("https://voting.surabayawebtech.com/api/auth/candidates", formData, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

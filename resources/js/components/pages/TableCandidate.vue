@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await axios.get("http://127.0.0.1:8000/api/auth/candidates",{
+      const response = await axios.get("https://voting.surabayawebtech.com/api/auth/candidates",{
         headers:{
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -97,7 +97,7 @@ export default {
   if (result.isConfirmed) {
     try {
       // Jika user mengklik tombol "Hapus", lakukan proses delete
-      await axios.delete(`http://127.0.0.1:8000/api/auth/candidates/${id}`, {
+      await axios.delete(`https://voting.surabayawebtech.com/api/auth/candidates/${id}`, {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }

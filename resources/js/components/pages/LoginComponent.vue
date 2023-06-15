@@ -97,7 +97,7 @@ export default {
   methods: {
     async handleSubmit() {
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+        const response = await axios.post('https://voting.surabayawebtech.com/api/auth/login', {
           email: this.email,
           password: this.password
         });

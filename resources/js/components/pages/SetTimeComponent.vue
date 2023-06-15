@@ -64,7 +64,7 @@ export default {
   methods: {
     async fetchData() {
       this.itemID = this.$route.params.id;
-      const response = await axios.get(`http://127.0.0.1:8000/api/auth/time/${this.itemID}`, {
+      const response = await axios.get(`https://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -85,7 +85,7 @@ export default {
         formData.append("end_time", endDateTime);
 
         axios
-          .post(`http://127.0.0.1:8000/api/auth/time/${this.itemID}`, formData, {
+          .post(`https://voting.surabayawebtech.com/api/auth/time/${this.itemID}`, formData, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
             },
