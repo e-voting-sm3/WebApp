@@ -25,7 +25,7 @@
                         <th scope="col">No.</th>
                         <th scope="col">Nama Kandidate</th>
                         <th scope="col">Visi</th>
-                        <th scope="col">Misi</th>
+                        <!-- <th scope="col">Misi</th> -->
                         <th scope="col">Gambar</th>
                         <th scope="col">Aksi</th>
                       </tr>
@@ -35,7 +35,7 @@
                             <th scope="row">{{ index + 1 }}</th>
                             <td>{{ item.name}}</td>
                             <td>{{ item.visi}}</td>
-                            <td>{{ item.misi}}</td>
+                            <!-- <td>{{ item.misi}}</td> -->
                             <td>
                               <img
                                 :src="'/storage/image/' + item.photo"

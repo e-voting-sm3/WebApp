@@ -13,56 +13,54 @@
      <!--navigation-->
      <ul class="metismenu" id="menu">
          <li>
-            <router-link to="/dashboard">
+            <a href="/dashboard">
                  <div class="parent-icon">
                      <i class="bi bi-speedometer2"></i>
                  </div>
                  <div class="menu-title">Dashboard</div>
-            </router-link>
-             <!-- <router-link to="/dashboard">
-             </router-link> -->
+            </a>
          </li>
          <li>
-             <router-link to="/createcandidate">
+             <a href="/createcandidate">
                  <div class="parent-icon">
                  <i class="bi bi-person-add"></i>
              </div>
                  <div class="menu-title">Create Candidate</div>
-             </router-link>
+             </a>
          </li>
          <li>
-             <router-link to="/candidate">
+             <a href="/candidate">
                  <div class="parent-icon">
                  <i class="bi bi-people"></i>
              </div>
                  <div class="menu-title">Data Candidates</div>
-             </router-link>
+             </a>
          </li>
          <li>
-             <router-link to="/time">
+             <a href="/time">
                  <div class="parent-icon">
                  <i class="bi bi-clock"></i>
              </div>
                  <div class="menu-title">Time Vote</div>
-             </router-link>
+             </a>
          </li>
          <li>
-             <router-link to="/result">
+             <a href="/result">
                  <div class="parent-icon">
                  <i class="bi bi-bar-chart"></i>
              </div>
                  <div class="menu-title">Result</div>
-             </router-link>
+             </a>
          </li>
 
          
          <li>
-             <router-link to="/voter">
+             <a href="/voter">
                  <div class="parent-icon">
                  <i class="bi bi-person-check"></i>
              </div>
                  <div class="menu-title">Data Voter</div>
-             </router-link>
+             </a>
          </li>
      </ul>
      <!--end navigation-->

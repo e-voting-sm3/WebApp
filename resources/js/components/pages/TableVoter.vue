@@ -16,7 +16,7 @@
         <!--end breadcrumb-->
           <div class="card radius-10">
             <div class="card-header bg-transparent">
-              <h6 class="mb-0 font-weight-bold">Users</h6>
+              <h6 class="mb-0 font-weight-bold">Voters</h6>
               </div>
                 <div class="table-responsive p-3">
                   <table class="table mb-0">
