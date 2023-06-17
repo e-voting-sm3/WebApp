@@ -119,11 +119,13 @@
       updateCandidate() {
         let formData = new FormData();
         formData.append("name", this.candidate.name);
-        formData.append("visi_misi", this.candidate.visi_misi);
+        formData.append("visi", this.candidate.visi);
+        formData.append("misi", this.candidate.misi);
         formData.append("photo", this.$refs.myImage.files[0]);
   
         console.log(this.candidate.name)
-        console.log(this.candidate.visi_misi)
+        console.log(this.candidate.visi)
+        console.log(this.candidate.misi)
         console.log(this.$refs.myImage.files[0])
   
         axios
