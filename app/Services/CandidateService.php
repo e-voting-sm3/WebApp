@@ -71,6 +71,12 @@ class CandidateService
             // delete old photo
             $candidate = $this->candidateRepository->getCandidateById($id);
             Storage::delete('public/image/'.$candidate->photo);
+        }else{
+            $candidateData = [
+                'name' => $request->name,
+                'visi' => $request->visi,
+                'misi' => $request->misi
+            ];
         }
 
         return $this->candidateRepository->updateCandidate($id, $candidateData);
