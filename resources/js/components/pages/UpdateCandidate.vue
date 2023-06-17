@@ -118,16 +118,16 @@
   
       updateCandidate() {
         let formData = new FormData();
-        formData.append("name", this.candidate.name);
-        formData.append("visi", this.candidate.visi);
-        formData.append("misi", this.candidate.misi);
-        formData.append("photo", this.$refs.myImage.files[0]);
-  
-        console.log(this.candidate.name)
-        console.log(this.candidate.visi)
-        console.log(this.candidate.misi)
-        console.log(this.$refs.myImage.files[0])
-  
+        if (this.$refs.myImage.files[0]) {
+          formData.append("name", this.candidate.name);
+          formData.append("visi", this.candidate.visi);
+          formData.append("misi", this.candidate.misi);
+          formData.append("photo", this.$refs.myImage.files[0]);
+        }else{
+          formData.append("name", this.candidate.name);
+          formData.append("visi", this.candidate.visi);
+          formData.append("misi", this.candidate.misi);
+        }  
         axios
     .post(`https://voting.surabayawebtech.com/api/auth/candidates/${this.itemID}`, formData, {
       headers: {
