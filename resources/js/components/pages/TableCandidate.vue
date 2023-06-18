@@ -1,14 +1,14 @@
 <template>
-	<div>
-		<!--navigation-->
-      <sidebar-component />
-		<!--end navigation-->
-        
-		<!--start header -->
-			<header-component/>	
-		<!--end header -->
-		
-		<!--start page wrapper -->
+  <div>
+    <!--navigation-->
+    <sidebar-component />
+    <!--end navigation-->
+
+    <!--start header -->
+    <header-component />
+    <!--end header -->
+
+    <!--start page wrapper -->
     <div class="page-wrapper">
       <div class="page-content">
         <!--breadcrumb-->
@@ -17,58 +17,46 @@
         <div class="card radius-10">
           <div class="card-header bg-transparent">
             <h6 class="mb-0 font-weight-bold">Candidate</h6>
-            </div>
-                <div class="table-responsive p-3">
-                  <table class="table mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Nama Kandidate</th>
-                        <th scope="col">Visi</th>
-                        <!-- <th scope="col">Misi</th> -->
-                        <th scope="col">Gambar</th>
-                        <th scope="col">Aksi</th>
-                      </tr>
-                    </thead>
-                      <tbody>
-                          <tr v-for="(item, index) in items" :key="item.message">
-                            <th scope="row">{{ index + 1 }}</th>
-                            <td>{{ item.name}}</td>
-                            <td>{{ item.visi}}</td>
-                            <!-- <td>{{ item.misi}}</td> -->
-                            <td>
-                              <img
-                                :src="'/storage/image/' + item.photo"
-                                  width="100"
-                                  height="100"
-                                  alt=""
-                                />
-                            </td>
-                            <td>
-                              <router-link
-                                :to="{ name: 'updatecandidate', params: { id: item.id } }"
-                                class="btn btn-outline-warning btn-sm"
-                                >Update</router-link
-                              >
-                              <button
-                                @click="deleteItem(item.id)"
-                                class="btn btn-outline-danger btn-sm"
-                              >
-                                Delete
-                              </button>
-                            </td> 
-                          </tr> 
-                      </tbody>
-                  </table>
-                </div>
-            
           </div>
-
+          <div class="table-responsive p-3">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Nama Kandidate</th>
+                  <th scope="col">Visi</th>
+                  <!-- <th scope="col">Misi</th> -->
+                  <th scope="col">Gambar</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(item, index) in items" :key="item.message">
+                  <th scope="row">{{ index + 1 }}</th>
+                  <td>{{ item.name }}</td>
+                  <td style="white-space: pre-wrap">{{ item.visi }}</td>
+                  <!-- <td>{{ item.misi }}</td> -->
+                  <td>
+                    <img :src="'/storage/image/' + item.photo" width="100" height="100" alt="" />
+                  </td>
+                  <td>
+                    <router-link
+                      :to="{ name: 'updatecandidate', params: { id: item.id } }"
+                      class="btn btn-outline-warning btn-sm"
+                    >Update</router-link>
+                    <button @click="deleteItem(item.id)" class="btn btn-outline-danger btn-sm">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-          
       </div>
-		<!--end page wrapper -->
-	</div>
+      <!--end page wrapper -->
+    </div>
+  </div>
 </template>
 
 <script>
