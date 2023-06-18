@@ -21,7 +21,7 @@
 							</div>
 							<div class="dashboard-top-countries mb-3 p-3">
 								<div class="row mb-4 " v-for="item in items" :key="item.message">
-									<div class="col-2">
+									<div class="col-sm-3 text-center">
 										<img
 										:src="'/storage/image/' + item.photo"
 										width="100"
@@ -29,7 +29,7 @@
 										alt=""
 										/>
 									</div>
-									<div class="col">
+									<div class="col-sm-9">
 										<p class="mb-2">{{item.name}} <strong class="float-end">{{ item.percentage }}</strong></p>
 										<div class="progress radius-10" style="height:16px;">
 											<div class="progress-bar bg-gradient-blues" role="progressbar" :style="{ width: item.percentage + '%' }">{{ item.percentage }}%</div>

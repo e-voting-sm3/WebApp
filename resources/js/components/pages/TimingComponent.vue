@@ -13,7 +13,7 @@
       <div class="page-content">
         <div class="card m-auto mb-3 mt-5" style="max-width: 540px">
         <div class="row g-0">
-          <div class="col-md-8">
+          <div class="col-sm-8">
             <div class="card-body">
               <h5 class="card-title">Start Time</h5>
               <p class="card-text">
@@ -25,11 +25,11 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-4">
             <!-- <router-link v-if="set" to="/settime" class="btn btn-outline-primary mt-5">
               Set Time
             </router-link> -->
-            <router-link :to="{ name: 'settime', params: { id: timingVote.id } }" class="btn btn-outline-warning mt-5">
+            <router-link :to="{ name: 'settime', params: { id: timingVote.id } }" class="btn btn-outline-warning customButton">
               Update
             </router-link>
           </div>
@@ -80,3 +80,20 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+@media screen and (max-width: 600px) {
+  /* Gaya CSS khusus untuk tampilan mobile */
+  .customButton {
+    margin: 0 10px 10px 0 !important;
+    float: right !important;
+  }
+}
+@media screen and (min-width: 610px) {
+  /* Gaya CSS khusus untuk tampilan mobile */
+  .customButton {
+    margin-top: 50px !important;
+  }
+}
+</style>
