@@ -15,11 +15,11 @@
         <div class="row g-0">
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Waktu Mulai</h5>
+              <h5 class="card-title">Start Time</h5>
               <p class="card-text">
                 {{ timingVote.start_time }}
               </p>
-              <h5 class="card-title">Waktu Berakhir</h5>
+              <h5 class="card-title">End Time</h5>
               <p class="card-text">
                 {{ timingVote.end_time }}
               </p>

@@ -15,14 +15,14 @@
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3"></div>
         <!--end breadcrumb-->
 
-        <h6 class="mb-0 text-uppercase">Set Time</h6>
+        <h6 class="mb-0 text-uppercase">Setting Time</h6>
         <hr />
         <div class="card">
           <div class="card-body">
             <div class="mb-3">
               <form @submit.prevent="updateTiming" enctype="multipart/form-data" ref="form">
                 <div class="mb-3">
-                  <label for="nama" class="form-label">Tanggal mulai</label>
+                  <label for="nama" class="form-label">Start Time</label>
                   <input
                     class="form-control form-control-sm"
                     type="datetime-local"
@@ -32,7 +32,7 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="nama" class="form-label">Tanggal berakhir</label>
+                  <label for="nama" class="form-label">End Time</label>
                   <input
                     class="form-control form-control-sm"
                     type="datetime-local"
@@ -42,8 +42,8 @@
                   />
                 </div>
 
-                <button type="submit" class="btn btn-md btn-primary">Save</button>
                 <router-link to="/time" class="btn btn-md btn-danger">Cancel</router-link>
+                <button type="submit" class="btn btn-md btn-primary">Save</button>
               </form>
             </div>
           </div>

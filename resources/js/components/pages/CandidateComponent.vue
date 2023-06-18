@@ -16,23 +16,26 @@
             <div class="mb-3">
               <form @submit.prevent="handleSubmit" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="formFile" class="form-label">Foto Kandidat</label>
+                  <label for="formFile" class="form-label">Image</label>
                   <input class="form-control" type="file" id="formFile" ref="myImage" @change="previewFiles" />
                 </div>
                 <div class="mb-3">
-                  <label for="nama" class="form-label">Nama</label>
+                  <label for="nama" class="form-label">Name</label>
                   <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" v-model="form.name" />
                 </div>
                 <div class="mb-3">
-                  <label for="visi" class="form-label">Visi</label>
+                  <label for="visi" class="form-label">Vision</label>
                   <textarea class="form-control" id="visi" rows="3" v-model="form.visi"></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="misi" class="form-label">Misi</label>
+                  <label for="misi" class="form-label">Mission</label>
                   <textarea class="form-control" id="misi" rows="3" v-model="form.misi"></textarea>
                 </div>
+                <router-link class="btn btn-md btn-danger" to="candidate">
+                  Cancel
+                </router-link>
                 <button type="submit" class="btn btn-md btn-primary">Save</button>
-                <button type="reset" class="btn btn-md btn-warning">Reset</button>
+                <!-- <button type="reset" class="btn btn-md btn-warning">Reset</button> -->
               </form>
             </div>
           </div>

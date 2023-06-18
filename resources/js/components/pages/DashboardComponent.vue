@@ -19,9 +19,9 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Waktu Mulai</p>
+										<p class="mb-0">Start Time</p>
 										<h4 class="font-weight-bold">{{startTime}}</h4>
-										<p class="text-secondary mb-0 font-13">waktu sedang dimulai</p>
+										<p class="text-secondary mb-0 font-13">the vote will begin</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white"><i class='bx bx-time'></i>
 									</div>
@@ -36,11 +36,11 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Waktu Berakhir</p>
+										<p class="mb-0">End Time</p>
 										<h4 class="font-weight-bold">{{endTime}}</h4>
-										<p class="text-secondary mb-0 font-13">waktu akan berakhir</p>
+										<p class="text-secondary mb-0 font-13">wthe vote will end</p>
 									</div>
-									<div class="widgets-icons bg-gradient-cosmic text-white"><i class='bx bx-time'></i>
+									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-time'></i>
 									</div>
 								</div>
 							</div>
@@ -53,9 +53,9 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Jumlah Kandidat</p>
+										<p class="mb-0">Number of candidates</p>
 										<h4 class="font-weight-bold">{{lengthCandidates}}</h4>
-										<p class="text-secondary mb-0 font-13">Kandidat</p>
+										<p class="text-secondary mb-0 font-13">all Candidates</p>
 									</div>
 									<div class="widgets-icons bg-gradient-blues text-white"><i class='bx bx-group'></i>
 									</div>
@@ -70,11 +70,11 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Sudah memilih</p>
+										<p class="mb-0">Voters who have voted</p>
 										<h4 class="font-weight-bold">{{lengthVoterTrue}}</h4>
-										<p class="text-secondary mb-0 font-13">Already vote</p>
+										<p class="text-secondary mb-0 font-13">already vote</p>
 									</div>
-									<div class="widgets-icons bg-gradient-kyoto text-white"><i class='bx bxs-check'></i>
+									<div class="widgets-icons bg-gradient-kyoto text-white"><i class="bi bi-check-lg"></i>
 									</div>
 								</div>
 							</div>
@@ -87,7 +87,7 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Belum Memilih</p>
+										<p class="mb-0">Voters who haven't voted</p>
 										<h4 class="font-weight-bold">{{lengthVoterFalse}}</h4>
 										<p class="text-secondary mb-0 font-13">haven't voted yet</p>
 									</div>
@@ -103,11 +103,11 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										<p class="mb-0">Jumlah Voter</p>
+										<p class="mb-0">Number of voters</p>
 										<h4 class="font-weight-bold">{{lengthVoters}}</h4>
 										<p class="text-secondary mb-0 font-13">all voters</p>
 									</div>
-									<div class="widgets-icons bg-gradient-burning text-white"><i class='bx bx-group'></i>
+									<div class="widgets-icons bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
 									</div>
 								</div>
 							</div>

@@ -17,7 +17,7 @@
           <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <div class="mb-3">
-              <label for="name" class="form-label">name</label>
+              <label for="name" class="form-label">Name</label>
               <input
                 type="text"
                 class="form-control"
@@ -32,7 +32,7 @@
           <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <div class="mb-3">
-              <label for="visi" class="form-label">Visi</label>
+              <label for="visi" class="form-label">Vision</label>
               <textarea class="form-control" id="visi" rows="3" v-model="candidate.visi" placeholder="masukkan visi"></textarea>
             </div>
           </div>
@@ -41,7 +41,7 @@
           <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <div class="mb-3">
-              <label for="misi" class="form-label">Misi</label>
+              <label for="misi" class="form-label">Mission</label>
               <textarea class="form-control" id="visi" rows="3" v-model="candidate.misi" placeholder="masukkan misi"></textarea>
             </div>
           </div>
@@ -52,7 +52,7 @@
             <div class="mb-3">
               <div class="row">
                 <div class="col-sm-6">
-                  <label for="photo" class="form-label">Foto</label>
+                  <label for="photo" class="form-label">Image</label>
                   <input
                     type="file"
                     class="form-control"
@@ -77,7 +77,7 @@
             <div class="row">
               <div class="col-sm-6">
                 <router-link to="/candidate" class="btn btn-outline-danger mb-5"
-                  >Back</router-link
+                  >Cancel</router-link
                 >
               </div>
               <div class="col-sm-6">

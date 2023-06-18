@@ -16,18 +16,18 @@
         <!--end breadcrumb-->
         <div class="card radius-10">
           <div class="card-header bg-transparent">
-            <h6 class="mb-0 font-weight-bold">Candidate</h6>
+            <h3 class="mb-0 fw-bold text-center">Candidates</h3>
           </div>
           <div class="table-responsive p-3">
             <table class="table mb-0">
               <thead>
                 <tr>
                   <th scope="col">No.</th>
-                  <th scope="col">Nama Kandidate</th>
-                  <th scope="col">Visi</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Vision</th>
                   <!-- <th scope="col">Misi</th> -->
-                  <th scope="col">Gambar</th>
-                  <th scope="col">Aksi</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody>

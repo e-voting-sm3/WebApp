@@ -15,7 +15,7 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div>
-										<h6 class="mb-0">Hasil Voting</h6>
+										<h6 class="mb-0">Results</h6>
 									</div>	
 								</div>
 							</div>
