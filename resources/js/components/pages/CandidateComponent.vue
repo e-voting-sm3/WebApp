@@ -92,7 +92,7 @@ export default {
             timer: 1500,
           }).then(() => {
             // router.push("/halaman-lain");
-            this.$router.push('/candidate');
+            window.location.href = '/candidate';
           });
         })
         .catch((error) => {

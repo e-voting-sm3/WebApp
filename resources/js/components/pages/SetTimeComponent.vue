@@ -121,7 +121,7 @@ export default {
         showConfirmButton: false,
         timer: 1500,
       }).then(() => {
-        this.$router.push("/time");
+        window.location.href = '/time';
       });
     },
   },

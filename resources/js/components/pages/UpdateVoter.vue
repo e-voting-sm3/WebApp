@@ -148,6 +148,7 @@
         this.$swal('Data Berhasil di update!!').then(() => {
           // Redirect to a specific page
           this.$router.push('/candidate');
+          window.location.href = '/voter';
         });
       }
     },

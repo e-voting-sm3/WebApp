@@ -62,12 +62,52 @@
                  <div class="menu-title">Data Voter</div>
              </a>
          </li>
+         <li>
+             <div class="logout bg-danger text-light" @click="logout()">
+                Logout
+             </div>
+         </li>
      </ul>
      <!--end navigation-->
  </div>
 </template>
+<script>
+import Swal from "sweetalert2";
 
-<style>
+export default {
+  methods: {
+    logout() {
+      Swal.fire({
+        icon: "question",
+        title: "Konfirmasi Logout",
+        text: "Anda yakin ingin logout?",
+        showCancelButton: true,
+        confirmButtonText: "Logout",
+        cancelButtonText: "Batal",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.clear();
+          localStorage.removeItem("token");
+          this.$router.push("/");
+        }
+      });
+    },
+  },
+};
+</script>
+
+<style scoped>
+@media screen and (min-width: 600px) {
+  /* Gaya CSS khusus untuk tampilan desktop */
+        .logout{
+            display: none;
+        }
+}
+.logout {
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
 .menu-title {
 color: #000000;
 }

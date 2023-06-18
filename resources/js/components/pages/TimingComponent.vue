@@ -91,7 +91,7 @@ export default {
   }
 }
 @media screen and (min-width: 610px) {
-  /* Gaya CSS khusus untuk tampilan mobile */
+  /* Gaya CSS khusus untuk tampilan desktop */
   .customButton {
     margin-top: 50px !important;
   }

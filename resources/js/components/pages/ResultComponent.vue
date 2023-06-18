@@ -113,7 +113,7 @@ created() {
       // Jika token tidak ada atau kadaluarsa, redirect ke halaman utama
       localStorage.removeItem("token");
       localStorage.removeItem("expires_in");
-      this.$router.push("/");
+      window.location.href = '/';
       return;
     }
     this.fetchData();

@@ -84,7 +84,7 @@ export default {
     if (response.data.level === 'admin') {
       localStorage.setItem('token', response.data.access_token);
       localStorage.setItem('expires_in', response.data.expires_in);
-      this.$router.push("/dashboard");
+      window.location.href = '/dashboard';
     } else {
       Swal.fire({
         icon: "error",

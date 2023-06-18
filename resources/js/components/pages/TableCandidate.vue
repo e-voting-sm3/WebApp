@@ -105,7 +105,7 @@ export default {
       // Terjadi error saat menghapus data dari server, tampilkan pesan error jika diperlukan
       console.error(error);
     }
-    this.$router.push('/candidate');
+    window.location.href = '/candidate';
   }
 },
 
